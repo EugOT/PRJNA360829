@@ -1,0 +1,3241 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 40
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job                       count    min threads    max threads
+----------------------  -------  -------------  -------------
+all                           1              1              1
+bustools_downsample_gc       11              1              1
+bustools_predict_gc          11              1              1
+bustools_sort_gc             11              4              4
+bustools_umicorrect_gc       11              1              1
+kallisto_gc                  11             10             10
+total                        56              1             10
+
+Select jobs to execute...
+
+[Sun Jul 18 19:48:32 2021]
+rule kallisto_gc:
+    input: fastq_gz/Arc3_R1.fastq.gz, fastq_gz/Arc3_R2.fastq.gz
+    output: bus_output_Arc3/output.bus, bus_output_Arc3/matrix.ec, bus_output_Arc3/transcripts.txt
+    log: logs/kallisto-bus_Arc3.log
+    jobid: 3
+    wildcards: sample=Arc3
+    threads: 10
+    resources: tmpdir=/tmp
+
+
+[Sun Jul 18 19:48:32 2021]
+rule kallisto_gc:
+    input: fastq_gz/Arc1_R1.fastq.gz, fastq_gz/Arc1_R2.fastq.gz
+    output: bus_output_Arc1/output.bus, bus_output_Arc1/matrix.ec, bus_output_Arc1/transcripts.txt
+    log: logs/kallisto-bus_Arc1.log
+    jobid: 1
+    wildcards: sample=Arc1
+    threads: 10
+    resources: tmpdir=/tmp
+
+
+[Sun Jul 18 19:48:32 2021]
+rule kallisto_gc:
+    input: fastq_gz/M_Fed_R1.fastq.gz, fastq_gz/M_Fed_R2.fastq.gz
+    output: bus_output_M_Fed/output.bus, bus_output_M_Fed/matrix.ec, bus_output_M_Fed/transcripts.txt
+    log: logs/kallisto-bus_M_Fed.log
+    jobid: 8
+    wildcards: sample=M_Fed
+    threads: 10
+    resources: tmpdir=/tmp
+
+
+[Sun Jul 18 19:48:32 2021]
+rule kallisto_gc:
+    input: fastq_gz/F_Fasted_R1.fastq.gz, fastq_gz/F_Fasted_R2.fastq.gz
+    output: bus_output_F_Fasted/output.bus, bus_output_F_Fasted/matrix.ec, bus_output_F_Fasted/transcripts.txt
+    log: logs/kallisto-bus_F_Fasted.log
+    jobid: 11
+    wildcards: sample=F_Fasted
+    threads: 10
+    resources: tmpdir=/tmp
+
+[Sun Jul 18 19:54:02 2021]
+Finished job 8.
+1 of 56 steps (2%) done
+Select jobs to execute...
+
+[Sun Jul 18 19:54:03 2021]
+rule kallisto_gc:
+    input: fastq_gz/Chow10_R1.fastq.gz, fastq_gz/Chow10_R2.fastq.gz
+    output: bus_output_Chow10/output.bus, bus_output_Chow10/matrix.ec, bus_output_Chow10/transcripts.txt
+    log: logs/kallisto-bus_Chow10.log
+    jobid: 4
+    wildcards: sample=Chow10
+    threads: 10
+    resources: tmpdir=/tmp
+
+[Sun Jul 18 19:56:17 2021]
+Finished job 11.
+2 of 56 steps (4%) done
+Select jobs to execute...
+
+[Sun Jul 18 19:56:17 2021]
+rule kallisto_gc:
+    input: fastq_gz/M_Fasted_R1.fastq.gz, fastq_gz/M_Fasted_R2.fastq.gz
+    output: bus_output_M_Fasted/output.bus, bus_output_M_Fasted/matrix.ec, bus_output_M_Fasted/transcripts.txt
+    log: logs/kallisto-bus_M_Fasted.log
+    jobid: 9
+    wildcards: sample=M_Fasted
+    threads: 10
+    resources: tmpdir=/tmp
+
+[Sun Jul 18 19:56:43 2021]
+Finished job 3.
+3 of 56 steps (5%) done
+Select jobs to execute...
+
+[Sun Jul 18 19:56:43 2021]
+rule kallisto_gc:
+    input: fastq_gz/Refed_R1.fastq.gz, fastq_gz/Refed_R2.fastq.gz
+    output: bus_output_Refed/output.bus, bus_output_Refed/matrix.ec, bus_output_Refed/transcripts.txt
+    log: logs/kallisto-bus_Refed.log
+    jobid: 7
+    wildcards: sample=Refed
+    threads: 10
+    resources: tmpdir=/tmp
+
+[Sun Jul 18 20:02:38 2021]
+Finished job 4.
+4 of 56 steps (7%) done
+Select jobs to execute...
+
+[Sun Jul 18 20:02:38 2021]
+rule kallisto_gc:
+    input: fastq_gz/Arc2_R1.fastq.gz, fastq_gz/Arc2_R2.fastq.gz
+    output: bus_output_Arc2/output.bus, bus_output_Arc2/matrix.ec, bus_output_Arc2/transcripts.txt
+    log: logs/kallisto-bus_Arc2.log
+    jobid: 2
+    wildcards: sample=Arc2
+    threads: 10
+    resources: tmpdir=/tmp
+
+[Sun Jul 18 20:02:38 2021]
+Finished job 9.
+5 of 56 steps (9%) done
+Select jobs to execute...
+
+[Sun Jul 18 20:02:38 2021]
+rule kallisto_gc:
+    input: fastq_gz/F_Fed_R1.fastq.gz, fastq_gz/F_Fed_R2.fastq.gz
+    output: bus_output_F_Fed/output.bus, bus_output_F_Fed/matrix.ec, bus_output_F_Fed/transcripts.txt
+    log: logs/kallisto-bus_F_Fed.log
+    jobid: 10
+    wildcards: sample=F_Fed
+    threads: 10
+    resources: tmpdir=/tmp
+
+[Sun Jul 18 20:10:51 2021]
+Finished job 2.
+6 of 56 steps (11%) done
+Select jobs to execute...
+
+[Sun Jul 18 20:10:51 2021]
+rule kallisto_gc:
+    input: fastq_gz/Fasted_R1.fastq.gz, fastq_gz/Fasted_R2.fastq.gz
+    output: bus_output_Fasted/output.bus, bus_output_Fasted/matrix.ec, bus_output_Fasted/transcripts.txt
+    log: logs/kallisto-bus_Fasted.log
+    jobid: 6
+    wildcards: sample=Fasted
+    threads: 10
+    resources: tmpdir=/tmp
+
+[Sun Jul 18 20:11:26 2021]
+Finished job 10.
+7 of 56 steps (12%) done
+Select jobs to execute...
+
+[Sun Jul 18 20:11:26 2021]
+rule kallisto_gc:
+    input: fastq_gz/HFD_R1.fastq.gz, fastq_gz/HFD_R2.fastq.gz
+    output: bus_output_HFD/output.bus, bus_output_HFD/matrix.ec, bus_output_HFD/transcripts.txt
+    log: logs/kallisto-bus_HFD.log
+    jobid: 5
+    wildcards: sample=HFD
+    threads: 10
+    resources: tmpdir=/tmp
+
+[Sun Jul 18 20:13:41 2021]
+Finished job 1.
+8 of 56 steps (14%) done
+Select jobs to execute...
+
+[Sun Jul 18 20:13:41 2021]
+rule bustools_sort_gc:
+    input: bus_output_F_Fed/output.bus
+    output: bus_output_F_Fed/sort.bus
+    log: logs/bustools-sort_F_Fed.log
+    jobid: 31
+    wildcards: sample=F_Fed
+    threads: 4
+    resources: tmpdir=/tmp
+
+
+[Sun Jul 18 20:13:41 2021]
+rule bustools_sort_gc:
+    input: bus_output_M_Fasted/output.bus
+    output: bus_output_M_Fasted/sort.bus
+    log: logs/bustools-sort_M_Fasted.log
+    jobid: 29
+    wildcards: sample=M_Fasted
+    threads: 4
+    resources: tmpdir=/tmp
+
+[Sun Jul 18 20:14:53 2021]
+Finished job 29.
+9 of 56 steps (16%) done
+Select jobs to execute...
+
+[Sun Jul 18 20:14:53 2021]
+rule bustools_umicorrect_gc:
+    input: bus_output_M_Fasted/sort.bus, bus_output_M_Fasted/matrix.ec, bus_output_M_Fasted/transcripts.txt
+    output: bus_output_M_Fasted/umicorr.bus
+    log: logs/bustools-umicorr_M_Fasted.log
+    jobid: 28
+    wildcards: sample=M_Fasted
+    resources: tmpdir=/tmp
+
+
+[Sun Jul 18 20:14:53 2021]
+rule bustools_sort_gc:
+    input: bus_output_Arc1/output.bus
+    output: bus_output_Arc1/sort.bus
+    log: logs/bustools-sort_Arc1.log
+    jobid: 13
+    wildcards: sample=Arc1
+    threads: 4
+    resources: tmpdir=/tmp
+
+[Sun Jul 18 20:15:25 2021]
+Finished job 31.
+10 of 56 steps (18%) done
+Select jobs to execute...
+
+[Sun Jul 18 20:15:25 2021]
+rule bustools_umicorrect_gc:
+    input: bus_output_F_Fed/sort.bus, bus_output_F_Fed/matrix.ec, bus_output_F_Fed/transcripts.txt
+    output: bus_output_F_Fed/umicorr.bus
+    log: logs/bustools-umicorr_F_Fed.log
+    jobid: 30
+    wildcards: sample=F_Fed
+    resources: tmpdir=/tmp
+
+
+[Sun Jul 18 20:15:25 2021]
+rule bustools_sort_gc:
+    input: bus_output_Arc3/output.bus
+    output: bus_output_Arc3/sort.bus
+    log: logs/bustools-sort_Arc3.log
+    jobid: 17
+    wildcards: sample=Arc3
+    threads: 4
+    resources: tmpdir=/tmp
+
+[Sun Jul 18 20:16:44 2021]
+Finished job 28.
+11 of 56 steps (20%) done
+Select jobs to execute...
+
+[Sun Jul 18 20:16:44 2021]
+rule bustools_downsample_gc:
+    input: bus_output_M_Fasted/umicorr.bus, bus_output_M_Fasted/matrix.ec, bus_output_M_Fasted/transcripts.txt
+    output: count_ds_M_Fasted/output.mtx
+    log: logs/bustools-count-ds_M_Fasted.log
+    jobid: 51
+    wildcards: sample=M_Fasted
+    resources: tmpdir=/tmp
+
+[Sun Jul 18 20:16:57 2021]
+Finished job 17.
+12 of 56 steps (21%) done
+Select jobs to execute...
+
+[Sun Jul 18 20:16:57 2021]
+rule bustools_sort_gc:
+    input: bus_output_Arc2/output.bus
+    output: bus_output_Arc2/sort.bus
+    log: logs/bustools-sort_Arc2.log
+    jobid: 15
+    wildcards: sample=Arc2
+    threads: 4
+    resources: tmpdir=/tmp
+
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 104 of /mnt/data/PRJNA360829/Snakefile:
+Job Missing files after 5 seconds:
+count_ds_M_Fasted/output.mtx
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 51 completed successfully, but some output files are missing. 51
+[Sun Jul 18 20:18:05 2021]
+Finished job 30.
+13 of 56 steps (23%) done
+[Sun Jul 18 20:18:15 2021]
+Finished job 15.
+14 of 56 steps (25%) done
+[Sun Jul 18 20:18:46 2021]
+Finished job 13.
+15 of 56 steps (27%) done
+[Sun Jul 18 20:20:44 2021]
+Finished job 5.
+16 of 56 steps (29%) done
+[Sun Jul 18 20:21:14 2021]
+Finished job 7.
+17 of 56 steps (30%) done
+[Sun Jul 18 20:32:23 2021]
+Finished job 6.
+18 of 56 steps (32%) done
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /mnt/data/PRJNA360829/.snakemake/log/2021-07-18T194831.952239.snakemake.log
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 40
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job                       count    min threads    max threads
+----------------------  -------  -------------  -------------
+all                           1              1              1
+bustools_count_gc            11              1              1
+bustools_downsample_gc       11              1              1
+bustools_predict_gc          11              1              1
+bustools_sort_gc              6              4              4
+bustools_umicorrect_gc        9              1              1
+total                        49              1              4
+
+Select jobs to execute...
+
+[Sun Jul 18 20:44:22 2021]
+rule bustools_umicorrect_gc:
+    input: bus_output_Arc3/sort.bus, bus_output_Arc3/matrix.ec, bus_output_Arc3/transcripts.txt
+    output: bus_output_Arc3/umicorr.bus
+    log: logs/bustools-umicorr_Arc3.log
+    jobid: 16
+    wildcards: sample=Arc3
+    resources: tmpdir=/tmp
+
+bustools umicorrect -e bus_output_Arc3/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_Arc3/transcripts.txt -o bus_output_Arc3/umicorr.bus bus_output_Arc3/sort.bus 2>logs/bustools-umicorr_Arc3.log
+
+[Sun Jul 18 20:44:22 2021]
+rule bustools_sort_gc:
+    input: bus_output_HFD/output.bus
+    output: bus_output_HFD/sort.bus
+    log: logs/bustools-sort_HFD.log
+    jobid: 21
+    wildcards: sample=HFD
+    threads: 4
+    resources: tmpdir=/tmp
+
+bustools sort -T /tmp/ -t 4 -o bus_output_HFD/sort.bus bus_output_HFD/output.bus 2>logs/bustools-sort_HFD.log
+
+[Sun Jul 18 20:44:22 2021]
+rule bustools_umicorrect_gc:
+    input: bus_output_Arc2/sort.bus, bus_output_Arc2/matrix.ec, bus_output_Arc2/transcripts.txt
+    output: bus_output_Arc2/umicorr.bus
+    log: logs/bustools-umicorr_Arc2.log
+    jobid: 14
+    wildcards: sample=Arc2
+    resources: tmpdir=/tmp
+
+bustools umicorrect -e bus_output_Arc2/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_Arc2/transcripts.txt -o bus_output_Arc2/umicorr.bus bus_output_Arc2/sort.bus 2>logs/bustools-umicorr_Arc2.log
+
+[Sun Jul 18 20:44:22 2021]
+rule bustools_downsample_gc:
+    input: bus_output_M_Fasted/umicorr.bus, bus_output_M_Fasted/matrix.ec, bus_output_M_Fasted/transcripts.txt
+    output: count_ds_M_Fasted/output.mtx
+    log: logs/bustools-count-ds_M_Fasted.log
+    jobid: 62
+    wildcards: sample=M_Fasted
+    resources: tmpdir=/tmp
+
+bustools count --downsample 0.1 --hist -m --genecounts -e bus_output_M_Fasted/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_M_Fasted/transcripts.txt -o count_ds_M_Fasted/ bus_output_M_Fasted/umicorr.bus 2>logs/bustools-count-ds_M_Fasted.log
+
+[Sun Jul 18 20:44:22 2021]
+rule bustools_sort_gc:
+    input: bus_output_Fasted/output.bus
+    output: bus_output_Fasted/sort.bus
+    log: logs/bustools-sort_Fasted.log
+    jobid: 23
+    wildcards: sample=Fasted
+    threads: 4
+    resources: tmpdir=/tmp
+
+bustools sort -T /tmp/ -t 4 -o bus_output_Fasted/sort.bus bus_output_Fasted/output.bus 2>logs/bustools-sort_Fasted.log
+
+[Sun Jul 18 20:44:22 2021]
+rule bustools_sort_gc:
+    input: bus_output_Refed/output.bus
+    output: bus_output_Refed/sort.bus
+    log: logs/bustools-sort_Refed.log
+    jobid: 25
+    wildcards: sample=Refed
+    threads: 4
+    resources: tmpdir=/tmp
+
+bustools sort -T /tmp/ -t 4 -o bus_output_Refed/sort.bus bus_output_Refed/output.bus 2>logs/bustools-sort_Refed.log
+
+[Sun Jul 18 20:44:22 2021]
+rule bustools_sort_gc:
+    input: bus_output_F_Fasted/output.bus
+    output: bus_output_F_Fasted/sort.bus
+    log: logs/bustools-sort_F_Fasted.log
+    jobid: 33
+    wildcards: sample=F_Fasted
+    threads: 4
+    resources: tmpdir=/tmp
+
+bustools sort -T /tmp/ -t 4 -o bus_output_F_Fasted/sort.bus bus_output_F_Fasted/output.bus 2>logs/bustools-sort_F_Fasted.log
+
+[Sun Jul 18 20:44:22 2021]
+rule bustools_count_gc:
+    input: bus_output_M_Fasted/umicorr.bus, bus_output_M_Fasted/matrix.ec, bus_output_M_Fasted/transcripts.txt
+    output: count_M_Fasted/output.mtx
+    log: logs/bustools-count_M_Fasted.log
+    jobid: 42
+    wildcards: sample=M_Fasted
+    resources: tmpdir=/tmp
+
+bustools count --hist -m --genecounts -e bus_output_M_Fasted/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_M_Fasted/transcripts.txt -o count_M_Fasted/ bus_output_M_Fasted/umicorr.bus 2>logs/bustools-count_M_Fasted.log
+
+[Sun Jul 18 20:44:22 2021]
+rule bustools_umicorrect_gc:
+    input: bus_output_Arc1/sort.bus, bus_output_Arc1/matrix.ec, bus_output_Arc1/transcripts.txt
+    output: bus_output_Arc1/umicorr.bus
+    log: logs/bustools-umicorr_Arc1.log
+    jobid: 12
+    wildcards: sample=Arc1
+    resources: tmpdir=/tmp
+
+bustools umicorrect -e bus_output_Arc1/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_Arc1/transcripts.txt -o bus_output_Arc1/umicorr.bus bus_output_Arc1/sort.bus 2>logs/bustools-umicorr_Arc1.log
+
+[Sun Jul 18 20:44:22 2021]
+rule bustools_sort_gc:
+    input: bus_output_M_Fed/output.bus
+    output: bus_output_M_Fed/sort.bus
+    log: logs/bustools-sort_M_Fed.log
+    jobid: 27
+    wildcards: sample=M_Fed
+    threads: 4
+    resources: tmpdir=/tmp
+
+bustools sort -T /tmp/ -t 4 -o bus_output_M_Fed/sort.bus bus_output_M_Fed/output.bus 2>logs/bustools-sort_M_Fed.log
+
+[Sun Jul 18 20:44:22 2021]
+rule bustools_sort_gc:
+    input: bus_output_Chow10/output.bus
+    output: bus_output_Chow10/sort.bus
+    log: logs/bustools-sort_Chow10.log
+    jobid: 19
+    wildcards: sample=Chow10
+    threads: 4
+    resources: tmpdir=/tmp
+
+bustools sort -T /tmp/ -t 4 -o bus_output_Chow10/sort.bus bus_output_Chow10/output.bus 2>logs/bustools-sort_Chow10.log
+
+[Sun Jul 18 20:44:22 2021]
+rule bustools_count_gc:
+    input: bus_output_F_Fed/umicorr.bus, bus_output_F_Fed/matrix.ec, bus_output_F_Fed/transcripts.txt
+    output: count_F_Fed/output.mtx
+    log: logs/bustools-count_F_Fed.log
+    jobid: 43
+    wildcards: sample=F_Fed
+    resources: tmpdir=/tmp
+
+bustools count --hist -m --genecounts -e bus_output_F_Fed/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_F_Fed/transcripts.txt -o count_F_Fed/ bus_output_F_Fed/umicorr.bus 2>logs/bustools-count_F_Fed.log
+
+[Sun Jul 18 20:44:22 2021]
+rule bustools_downsample_gc:
+    input: bus_output_F_Fed/umicorr.bus, bus_output_F_Fed/matrix.ec, bus_output_F_Fed/transcripts.txt
+    output: count_ds_F_Fed/output.mtx
+    log: logs/bustools-count-ds_F_Fed.log
+    jobid: 64
+    wildcards: sample=F_Fed
+    resources: tmpdir=/tmp
+
+bustools count --downsample 0.1 --hist -m --genecounts -e bus_output_F_Fed/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_F_Fed/transcripts.txt -o count_ds_F_Fed/ bus_output_F_Fed/umicorr.bus 2>logs/bustools-count-ds_F_Fed.log
+[Sun Jul 18 20:45:31 2021]
+Finished job 62.
+1 of 49 steps (2%) done
+[Sun Jul 18 20:45:31 2021]
+Finished job 42.
+2 of 49 steps (4%) done
+Select jobs to execute...
+
+[Sun Jul 18 20:45:31 2021]
+rule bustools_predict_gc:
+    input: count_ds_M_Fasted/output.mtx
+    output: count_ds_pred_M_Fasted/output.mtx
+    log: logs/bustools-predict_M_Fasted.log
+    jobid: 61
+    wildcards: sample=M_Fasted
+    resources: tmpdir=/tmp
+
+bustools predict -t 10 -o count_ds_pred_M_Fasted/ count_ds_M_Fasted/ 2>logs/bustools-predict_M_Fasted.log
+[Sun Jul 18 20:45:34 2021]
+Finished job 61.
+3 of 49 steps (6%) done
+[Sun Jul 18 20:45:36 2021]
+Finished job 43.
+4 of 49 steps (8%) done
+[Sun Jul 18 20:45:36 2021]
+Finished job 64.
+5 of 49 steps (10%) done
+Select jobs to execute...
+
+[Sun Jul 18 20:45:36 2021]
+rule bustools_predict_gc:
+    input: count_ds_F_Fed/output.mtx
+    output: count_ds_pred_F_Fed/output.mtx
+    log: logs/bustools-predict_F_Fed.log
+    jobid: 63
+    wildcards: sample=F_Fed
+    resources: tmpdir=/tmp
+
+bustools predict -t 10 -o count_ds_pred_F_Fed/ count_ds_F_Fed/ 2>logs/bustools-predict_F_Fed.log
+[Sun Jul 18 20:45:39 2021]
+Finished job 27.
+6 of 49 steps (12%) done
+Select jobs to execute...
+
+[Sun Jul 18 20:45:39 2021]
+rule bustools_umicorrect_gc:
+    input: bus_output_M_Fed/sort.bus, bus_output_M_Fed/matrix.ec, bus_output_M_Fed/transcripts.txt
+    output: bus_output_M_Fed/umicorr.bus
+    log: logs/bustools-umicorr_M_Fed.log
+    jobid: 26
+    wildcards: sample=M_Fed
+    resources: tmpdir=/tmp
+
+bustools umicorrect -e bus_output_M_Fed/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_M_Fed/transcripts.txt -o bus_output_M_Fed/umicorr.bus bus_output_M_Fed/sort.bus 2>logs/bustools-umicorr_M_Fed.log
+[Sun Jul 18 20:45:40 2021]
+Finished job 63.
+7 of 49 steps (14%) done
+[Sun Jul 18 20:46:09 2021]
+Finished job 33.
+8 of 49 steps (16%) done
+Select jobs to execute...
+
+[Sun Jul 18 20:46:09 2021]
+rule bustools_umicorrect_gc:
+    input: bus_output_F_Fasted/sort.bus, bus_output_F_Fasted/matrix.ec, bus_output_F_Fasted/transcripts.txt
+    output: bus_output_F_Fasted/umicorr.bus
+    log: logs/bustools-umicorr_F_Fasted.log
+    jobid: 32
+    wildcards: sample=F_Fasted
+    resources: tmpdir=/tmp
+
+bustools umicorrect -e bus_output_F_Fasted/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_F_Fasted/transcripts.txt -o bus_output_F_Fasted/umicorr.bus bus_output_F_Fasted/sort.bus 2>logs/bustools-umicorr_F_Fasted.log
+[Sun Jul 18 20:46:53 2021]
+Finished job 19.
+9 of 49 steps (18%) done
+Select jobs to execute...
+
+[Sun Jul 18 20:46:53 2021]
+rule bustools_umicorrect_gc:
+    input: bus_output_Chow10/sort.bus, bus_output_Chow10/matrix.ec, bus_output_Chow10/transcripts.txt
+    output: bus_output_Chow10/umicorr.bus
+    log: logs/bustools-umicorr_Chow10.log
+    jobid: 18
+    wildcards: sample=Chow10
+    resources: tmpdir=/tmp
+
+bustools umicorrect -e bus_output_Chow10/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_Chow10/transcripts.txt -o bus_output_Chow10/umicorr.bus bus_output_Chow10/sort.bus 2>logs/bustools-umicorr_Chow10.log
+[Sun Jul 18 20:47:02 2021]
+Finished job 26.
+10 of 49 steps (20%) done
+Select jobs to execute...
+
+[Sun Jul 18 20:47:02 2021]
+rule bustools_downsample_gc:
+    input: bus_output_M_Fed/umicorr.bus, bus_output_M_Fed/matrix.ec, bus_output_M_Fed/transcripts.txt
+    output: count_ds_M_Fed/output.mtx
+    log: logs/bustools-count-ds_M_Fed.log
+    jobid: 60
+    wildcards: sample=M_Fed
+    resources: tmpdir=/tmp
+
+bustools count --downsample 0.1 --hist -m --genecounts -e bus_output_M_Fed/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_M_Fed/transcripts.txt -o count_ds_M_Fed/ bus_output_M_Fed/umicorr.bus 2>logs/bustools-count-ds_M_Fed.log
+
+[Sun Jul 18 20:47:02 2021]
+rule bustools_count_gc:
+    input: bus_output_M_Fed/umicorr.bus, bus_output_M_Fed/matrix.ec, bus_output_M_Fed/transcripts.txt
+    output: count_M_Fed/output.mtx
+    log: logs/bustools-count_M_Fed.log
+    jobid: 41
+    wildcards: sample=M_Fed
+    resources: tmpdir=/tmp
+
+bustools count --hist -m --genecounts -e bus_output_M_Fed/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_M_Fed/transcripts.txt -o count_M_Fed/ bus_output_M_Fed/umicorr.bus 2>logs/bustools-count_M_Fed.log
+[Sun Jul 18 20:47:06 2021]
+Finished job 21.
+11 of 49 steps (22%) done
+Select jobs to execute...
+
+[Sun Jul 18 20:47:06 2021]
+rule bustools_umicorrect_gc:
+    input: bus_output_HFD/sort.bus, bus_output_HFD/matrix.ec, bus_output_HFD/transcripts.txt
+    output: bus_output_HFD/umicorr.bus
+    log: logs/bustools-umicorr_HFD.log
+    jobid: 20
+    wildcards: sample=HFD
+    resources: tmpdir=/tmp
+
+bustools umicorrect -e bus_output_HFD/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_HFD/transcripts.txt -o bus_output_HFD/umicorr.bus bus_output_HFD/sort.bus 2>logs/bustools-umicorr_HFD.log
+[Sun Jul 18 20:47:24 2021]
+Finished job 60.
+12 of 49 steps (24%) done
+Select jobs to execute...
+
+[Sun Jul 18 20:47:24 2021]
+rule bustools_predict_gc:
+    input: count_ds_M_Fed/output.mtx
+    output: count_ds_pred_M_Fed/output.mtx
+    log: logs/bustools-predict_M_Fed.log
+    jobid: 59
+    wildcards: sample=M_Fed
+    resources: tmpdir=/tmp
+
+bustools predict -t 10 -o count_ds_pred_M_Fed/ count_ds_M_Fed/ 2>logs/bustools-predict_M_Fed.log
+[Sun Jul 18 20:47:25 2021]
+Finished job 41.
+13 of 49 steps (27%) done
+[Sun Jul 18 20:47:30 2021]
+Finished job 59.
+14 of 49 steps (29%) done
+[Sun Jul 18 20:47:38 2021]
+Finished job 14.
+15 of 49 steps (31%) done
+Select jobs to execute...
+
+[Sun Jul 18 20:47:38 2021]
+rule bustools_count_gc:
+    input: bus_output_Arc2/umicorr.bus, bus_output_Arc2/matrix.ec, bus_output_Arc2/transcripts.txt
+    output: count_Arc2/output.mtx
+    log: logs/bustools-count_Arc2.log
+    jobid: 35
+    wildcards: sample=Arc2
+    resources: tmpdir=/tmp
+
+bustools count --hist -m --genecounts -e bus_output_Arc2/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_Arc2/transcripts.txt -o count_Arc2/ bus_output_Arc2/umicorr.bus 2>logs/bustools-count_Arc2.log
+
+[Sun Jul 18 20:47:38 2021]
+rule bustools_downsample_gc:
+    input: bus_output_Arc2/umicorr.bus, bus_output_Arc2/matrix.ec, bus_output_Arc2/transcripts.txt
+    output: count_ds_Arc2/output.mtx
+    log: logs/bustools-count-ds_Arc2.log
+    jobid: 48
+    wildcards: sample=Arc2
+    resources: tmpdir=/tmp
+
+bustools count --downsample 0.1 --hist -m --genecounts -e bus_output_Arc2/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_Arc2/transcripts.txt -o count_ds_Arc2/ bus_output_Arc2/umicorr.bus 2>logs/bustools-count-ds_Arc2.log
+[Sun Jul 18 20:47:56 2021]
+Finished job 16.
+16 of 49 steps (33%) done
+Select jobs to execute...
+
+[Sun Jul 18 20:47:56 2021]
+rule bustools_count_gc:
+    input: bus_output_Arc3/umicorr.bus, bus_output_Arc3/matrix.ec, bus_output_Arc3/transcripts.txt
+    output: count_Arc3/output.mtx
+    log: logs/bustools-count_Arc3.log
+    jobid: 36
+    wildcards: sample=Arc3
+    resources: tmpdir=/tmp
+
+bustools count --hist -m --genecounts -e bus_output_Arc3/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_Arc3/transcripts.txt -o count_Arc3/ bus_output_Arc3/umicorr.bus 2>logs/bustools-count_Arc3.log
+
+[Sun Jul 18 20:47:56 2021]
+rule bustools_downsample_gc:
+    input: bus_output_Arc3/umicorr.bus, bus_output_Arc3/matrix.ec, bus_output_Arc3/transcripts.txt
+    output: count_ds_Arc3/output.mtx
+    log: logs/bustools-count-ds_Arc3.log
+    jobid: 50
+    wildcards: sample=Arc3
+    resources: tmpdir=/tmp
+
+bustools count --downsample 0.1 --hist -m --genecounts -e bus_output_Arc3/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_Arc3/transcripts.txt -o count_ds_Arc3/ bus_output_Arc3/umicorr.bus 2>logs/bustools-count-ds_Arc3.log
+[Sun Jul 18 20:47:57 2021]
+Finished job 48.
+17 of 49 steps (35%) done
+Select jobs to execute...
+[Sun Jul 18 20:47:57 2021]
+Finished job 35.
+18 of 49 steps (37%) done
+
+[Sun Jul 18 20:47:57 2021]
+rule bustools_predict_gc:
+    input: count_ds_Arc2/output.mtx
+    output: count_ds_pred_Arc2/output.mtx
+    log: logs/bustools-predict_Arc2.log
+    jobid: 47
+    wildcards: sample=Arc2
+    resources: tmpdir=/tmp
+
+bustools predict -t 10 -o count_ds_pred_Arc2/ count_ds_Arc2/ 2>logs/bustools-predict_Arc2.log
+[Sun Jul 18 20:47:59 2021]
+Finished job 47.
+19 of 49 steps (39%) done
+[Sun Jul 18 20:48:01 2021]
+Finished job 32.
+20 of 49 steps (41%) done
+Select jobs to execute...
+
+[Sun Jul 18 20:48:01 2021]
+rule bustools_downsample_gc:
+    input: bus_output_F_Fasted/umicorr.bus, bus_output_F_Fasted/matrix.ec, bus_output_F_Fasted/transcripts.txt
+    output: count_ds_F_Fasted/output.mtx
+    log: logs/bustools-count-ds_F_Fasted.log
+    jobid: 66
+    wildcards: sample=F_Fasted
+    resources: tmpdir=/tmp
+
+bustools count --downsample 0.1 --hist -m --genecounts -e bus_output_F_Fasted/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_F_Fasted/transcripts.txt -o count_ds_F_Fasted/ bus_output_F_Fasted/umicorr.bus 2>logs/bustools-count-ds_F_Fasted.log
+
+[Sun Jul 18 20:48:01 2021]
+rule bustools_count_gc:
+    input: bus_output_F_Fasted/umicorr.bus, bus_output_F_Fasted/matrix.ec, bus_output_F_Fasted/transcripts.txt
+    output: count_F_Fasted/output.mtx
+    log: logs/bustools-count_F_Fasted.log
+    jobid: 44
+    wildcards: sample=F_Fasted
+    resources: tmpdir=/tmp
+
+bustools count --hist -m --genecounts -e bus_output_F_Fasted/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_F_Fasted/transcripts.txt -o count_F_Fasted/ bus_output_F_Fasted/umicorr.bus 2>logs/bustools-count_F_Fasted.log
+[Sun Jul 18 20:48:12 2021]
+Finished job 50.
+21 of 49 steps (43%) done
+Select jobs to execute...
+[Sun Jul 18 20:48:12 2021]
+Finished job 36.
+22 of 49 steps (45%) done
+
+[Sun Jul 18 20:48:12 2021]
+rule bustools_predict_gc:
+    input: count_ds_Arc3/output.mtx
+    output: count_ds_pred_Arc3/output.mtx
+    log: logs/bustools-predict_Arc3.log
+    jobid: 49
+    wildcards: sample=Arc3
+    resources: tmpdir=/tmp
+
+bustools predict -t 10 -o count_ds_pred_Arc3/ count_ds_Arc3/ 2>logs/bustools-predict_Arc3.log
+[Sun Jul 18 20:48:13 2021]
+Finished job 49.
+23 of 49 steps (47%) done
+[Sun Jul 18 20:48:27 2021]
+Finished job 66.
+24 of 49 steps (49%) done
+Select jobs to execute...
+[Sun Jul 18 20:48:27 2021]
+Finished job 44.
+25 of 49 steps (51%) done
+
+[Sun Jul 18 20:48:27 2021]
+rule bustools_predict_gc:
+    input: count_ds_F_Fasted/output.mtx
+    output: count_ds_pred_F_Fasted/output.mtx
+    log: logs/bustools-predict_F_Fasted.log
+    jobid: 65
+    wildcards: sample=F_Fasted
+    resources: tmpdir=/tmp
+
+bustools predict -t 10 -o count_ds_pred_F_Fasted/ count_ds_F_Fasted/ 2>logs/bustools-predict_F_Fasted.log
+[Sun Jul 18 20:48:29 2021]
+Finished job 65.
+26 of 49 steps (53%) done
+[Sun Jul 18 20:49:03 2021]
+Finished job 12.
+27 of 49 steps (55%) done
+Select jobs to execute...
+
+[Sun Jul 18 20:49:03 2021]
+rule bustools_count_gc:
+    input: bus_output_Arc1/umicorr.bus, bus_output_Arc1/matrix.ec, bus_output_Arc1/transcripts.txt
+    output: count_Arc1/output.mtx
+    log: logs/bustools-count_Arc1.log
+    jobid: 34
+    wildcards: sample=Arc1
+    resources: tmpdir=/tmp
+
+bustools count --hist -m --genecounts -e bus_output_Arc1/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_Arc1/transcripts.txt -o count_Arc1/ bus_output_Arc1/umicorr.bus 2>logs/bustools-count_Arc1.log
+
+[Sun Jul 18 20:49:03 2021]
+rule bustools_downsample_gc:
+    input: bus_output_Arc1/umicorr.bus, bus_output_Arc1/matrix.ec, bus_output_Arc1/transcripts.txt
+    output: count_ds_Arc1/output.mtx
+    log: logs/bustools-count-ds_Arc1.log
+    jobid: 46
+    wildcards: sample=Arc1
+    resources: tmpdir=/tmp
+
+bustools count --downsample 0.1 --hist -m --genecounts -e bus_output_Arc1/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_Arc1/transcripts.txt -o count_ds_Arc1/ bus_output_Arc1/umicorr.bus 2>logs/bustools-count-ds_Arc1.log
+[Sun Jul 18 20:49:30 2021]
+Finished job 46.
+28 of 49 steps (57%) done
+Select jobs to execute...
+[Sun Jul 18 20:49:30 2021]
+Finished job 34.
+29 of 49 steps (59%) done
+
+[Sun Jul 18 20:49:30 2021]
+rule bustools_predict_gc:
+    input: count_ds_Arc1/output.mtx
+    output: count_ds_pred_Arc1/output.mtx
+    log: logs/bustools-predict_Arc1.log
+    jobid: 45
+    wildcards: sample=Arc1
+    resources: tmpdir=/tmp
+
+bustools predict -t 10 -o count_ds_pred_Arc1/ count_ds_Arc1/ 2>logs/bustools-predict_Arc1.log
+[Sun Jul 18 20:49:32 2021]
+Finished job 45.
+30 of 49 steps (61%) done
+[Sun Jul 18 20:49:53 2021]
+Finished job 18.
+31 of 49 steps (63%) done
+Select jobs to execute...
+
+[Sun Jul 18 20:49:53 2021]
+rule bustools_downsample_gc:
+    input: bus_output_Chow10/umicorr.bus, bus_output_Chow10/matrix.ec, bus_output_Chow10/transcripts.txt
+    output: count_ds_Chow10/output.mtx
+    log: logs/bustools-count-ds_Chow10.log
+    jobid: 52
+    wildcards: sample=Chow10
+    resources: tmpdir=/tmp
+
+bustools count --downsample 0.1 --hist -m --genecounts -e bus_output_Chow10/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_Chow10/transcripts.txt -o count_ds_Chow10/ bus_output_Chow10/umicorr.bus 2>logs/bustools-count-ds_Chow10.log
+
+[Sun Jul 18 20:49:53 2021]
+rule bustools_count_gc:
+    input: bus_output_Chow10/umicorr.bus, bus_output_Chow10/matrix.ec, bus_output_Chow10/transcripts.txt
+    output: count_Chow10/output.mtx
+    log: logs/bustools-count_Chow10.log
+    jobid: 37
+    wildcards: sample=Chow10
+    resources: tmpdir=/tmp
+
+bustools count --hist -m --genecounts -e bus_output_Chow10/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_Chow10/transcripts.txt -o count_Chow10/ bus_output_Chow10/umicorr.bus 2>logs/bustools-count_Chow10.log
+[Sun Jul 18 20:50:08 2021]
+Finished job 37.
+32 of 49 steps (65%) done
+[Sun Jul 18 20:50:08 2021]
+Finished job 52.
+33 of 49 steps (67%) done
+Select jobs to execute...
+
+[Sun Jul 18 20:50:08 2021]
+rule bustools_predict_gc:
+    input: count_ds_Chow10/output.mtx
+    output: count_ds_pred_Chow10/output.mtx
+    log: logs/bustools-predict_Chow10.log
+    jobid: 51
+    wildcards: sample=Chow10
+    resources: tmpdir=/tmp
+
+bustools predict -t 10 -o count_ds_pred_Chow10/ count_ds_Chow10/ 2>logs/bustools-predict_Chow10.log
+[Sun Jul 18 20:50:09 2021]
+Finished job 51.
+34 of 49 steps (69%) done
+[Sun Jul 18 20:50:25 2021]
+Finished job 20.
+35 of 49 steps (71%) done
+Select jobs to execute...
+
+[Sun Jul 18 20:50:25 2021]
+rule bustools_downsample_gc:
+    input: bus_output_HFD/umicorr.bus, bus_output_HFD/matrix.ec, bus_output_HFD/transcripts.txt
+    output: count_ds_HFD/output.mtx
+    log: logs/bustools-count-ds_HFD.log
+    jobid: 54
+    wildcards: sample=HFD
+    resources: tmpdir=/tmp
+
+bustools count --downsample 0.1 --hist -m --genecounts -e bus_output_HFD/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_HFD/transcripts.txt -o count_ds_HFD/ bus_output_HFD/umicorr.bus 2>logs/bustools-count-ds_HFD.log
+
+[Sun Jul 18 20:50:25 2021]
+rule bustools_count_gc:
+    input: bus_output_HFD/umicorr.bus, bus_output_HFD/matrix.ec, bus_output_HFD/transcripts.txt
+    output: count_HFD/output.mtx
+    log: logs/bustools-count_HFD.log
+    jobid: 38
+    wildcards: sample=HFD
+    resources: tmpdir=/tmp
+
+bustools count --hist -m --genecounts -e bus_output_HFD/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_HFD/transcripts.txt -o count_HFD/ bus_output_HFD/umicorr.bus 2>logs/bustools-count_HFD.log
+[Sun Jul 18 20:50:33 2021]
+Finished job 23.
+36 of 49 steps (73%) done
+Select jobs to execute...
+
+[Sun Jul 18 20:50:33 2021]
+rule bustools_umicorrect_gc:
+    input: bus_output_Fasted/sort.bus, bus_output_Fasted/matrix.ec, bus_output_Fasted/transcripts.txt
+    output: bus_output_Fasted/umicorr.bus
+    log: logs/bustools-umicorr_Fasted.log
+    jobid: 22
+    wildcards: sample=Fasted
+    resources: tmpdir=/tmp
+
+bustools umicorrect -e bus_output_Fasted/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_Fasted/transcripts.txt -o bus_output_Fasted/umicorr.bus bus_output_Fasted/sort.bus 2>logs/bustools-umicorr_Fasted.log
+[Sun Jul 18 20:50:39 2021]
+Finished job 54.
+37 of 49 steps (76%) done
+Select jobs to execute...
+[Sun Jul 18 20:50:39 2021]
+Finished job 38.
+38 of 49 steps (78%) done
+
+[Sun Jul 18 20:50:39 2021]
+rule bustools_predict_gc:
+    input: count_ds_HFD/output.mtx
+    output: count_ds_pred_HFD/output.mtx
+    log: logs/bustools-predict_HFD.log
+    jobid: 53
+    wildcards: sample=HFD
+    resources: tmpdir=/tmp
+
+bustools predict -t 10 -o count_ds_pred_HFD/ count_ds_HFD/ 2>logs/bustools-predict_HFD.log
+[Sun Jul 18 20:50:40 2021]
+Finished job 53.
+39 of 49 steps (80%) done
+[Sun Jul 18 20:50:48 2021]
+Finished job 25.
+40 of 49 steps (82%) done
+Select jobs to execute...
+
+[Sun Jul 18 20:50:48 2021]
+rule bustools_umicorrect_gc:
+    input: bus_output_Refed/sort.bus, bus_output_Refed/matrix.ec, bus_output_Refed/transcripts.txt
+    output: bus_output_Refed/umicorr.bus
+    log: logs/bustools-umicorr_Refed.log
+    jobid: 24
+    wildcards: sample=Refed
+    resources: tmpdir=/tmp
+
+bustools umicorrect -e bus_output_Refed/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_Refed/transcripts.txt -o bus_output_Refed/umicorr.bus bus_output_Refed/sort.bus 2>logs/bustools-umicorr_Refed.log
+[Sun Jul 18 20:53:55 2021]
+Finished job 22.
+41 of 49 steps (84%) done
+Select jobs to execute...
+
+[Sun Jul 18 20:53:55 2021]
+rule bustools_downsample_gc:
+    input: bus_output_Fasted/umicorr.bus, bus_output_Fasted/matrix.ec, bus_output_Fasted/transcripts.txt
+    output: count_ds_Fasted/output.mtx
+    log: logs/bustools-count-ds_Fasted.log
+    jobid: 56
+    wildcards: sample=Fasted
+    resources: tmpdir=/tmp
+
+bustools count --downsample 0.1 --hist -m --genecounts -e bus_output_Fasted/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_Fasted/transcripts.txt -o count_ds_Fasted/ bus_output_Fasted/umicorr.bus 2>logs/bustools-count-ds_Fasted.log
+
+[Sun Jul 18 20:53:55 2021]
+rule bustools_count_gc:
+    input: bus_output_Fasted/umicorr.bus, bus_output_Fasted/matrix.ec, bus_output_Fasted/transcripts.txt
+    output: count_Fasted/output.mtx
+    log: logs/bustools-count_Fasted.log
+    jobid: 39
+    wildcards: sample=Fasted
+    resources: tmpdir=/tmp
+
+bustools count --hist -m --genecounts -e bus_output_Fasted/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_Fasted/transcripts.txt -o count_Fasted/ bus_output_Fasted/umicorr.bus 2>logs/bustools-count_Fasted.log
+[Sun Jul 18 20:54:19 2021]
+Finished job 24.
+42 of 49 steps (86%) done
+Select jobs to execute...
+
+[Sun Jul 18 20:54:19 2021]
+rule bustools_count_gc:
+    input: bus_output_Refed/umicorr.bus, bus_output_Refed/matrix.ec, bus_output_Refed/transcripts.txt
+    output: count_Refed/output.mtx
+    log: logs/bustools-count_Refed.log
+    jobid: 40
+    wildcards: sample=Refed
+    resources: tmpdir=/tmp
+
+bustools count --hist -m --genecounts -e bus_output_Refed/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_Refed/transcripts.txt -o count_Refed/ bus_output_Refed/umicorr.bus 2>logs/bustools-count_Refed.log
+
+[Sun Jul 18 20:54:19 2021]
+rule bustools_downsample_gc:
+    input: bus_output_Refed/umicorr.bus, bus_output_Refed/matrix.ec, bus_output_Refed/transcripts.txt
+    output: count_ds_Refed/output.mtx
+    log: logs/bustools-count-ds_Refed.log
+    jobid: 58
+    wildcards: sample=Refed
+    resources: tmpdir=/tmp
+
+bustools count --downsample 0.1 --hist -m --genecounts -e bus_output_Refed/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_Refed/transcripts.txt -o count_ds_Refed/ bus_output_Refed/umicorr.bus 2>logs/bustools-count-ds_Refed.log
+[Sun Jul 18 20:54:36 2021]
+Finished job 39.
+43 of 49 steps (88%) done
+[Sun Jul 18 20:54:36 2021]
+Finished job 56.
+44 of 49 steps (90%) done
+Select jobs to execute...
+
+[Sun Jul 18 20:54:36 2021]
+rule bustools_predict_gc:
+    input: count_ds_Fasted/output.mtx
+    output: count_ds_pred_Fasted/output.mtx
+    log: logs/bustools-predict_Fasted.log
+    jobid: 55
+    wildcards: sample=Fasted
+    resources: tmpdir=/tmp
+
+bustools predict -t 10 -o count_ds_pred_Fasted/ count_ds_Fasted/ 2>logs/bustools-predict_Fasted.log
+[Sun Jul 18 20:54:39 2021]
+Finished job 55.
+45 of 49 steps (92%) done
+[Sun Jul 18 20:55:00 2021]
+Finished job 40.
+46 of 49 steps (94%) done
+[Sun Jul 18 20:55:01 2021]
+Finished job 58.
+47 of 49 steps (96%) done
+Select jobs to execute...
+
+[Sun Jul 18 20:55:01 2021]
+rule bustools_predict_gc:
+    input: count_ds_Refed/output.mtx
+    output: count_ds_pred_Refed/output.mtx
+    log: logs/bustools-predict_Refed.log
+    jobid: 57
+    wildcards: sample=Refed
+    resources: tmpdir=/tmp
+
+bustools predict -t 10 -o count_ds_pred_Refed/ count_ds_Refed/ 2>logs/bustools-predict_Refed.log
+[Sun Jul 18 20:55:04 2021]
+Finished job 57.
+48 of 49 steps (98%) done
+Select jobs to execute...
+
+[Sun Jul 18 20:55:04 2021]
+localrule all:
+    input: bus_output_Arc1/output.bus, bus_output_Arc2/output.bus, bus_output_Arc3/output.bus, bus_output_Chow10/output.bus, bus_output_HFD/output.bus, bus_output_Fasted/output.bus, bus_output_Refed/output.bus, bus_output_M_Fed/output.bus, bus_output_M_Fasted/output.bus, bus_output_F_Fed/output.bus, bus_output_F_Fasted/output.bus, bus_output_Arc1/umicorr.bus, bus_output_Arc2/umicorr.bus, bus_output_Arc3/umicorr.bus, bus_output_Chow10/umicorr.bus, bus_output_HFD/umicorr.bus, bus_output_Fasted/umicorr.bus, bus_output_Refed/umicorr.bus, bus_output_M_Fed/umicorr.bus, bus_output_M_Fasted/umicorr.bus, bus_output_F_Fed/umicorr.bus, bus_output_F_Fasted/umicorr.bus, count_Arc1/output.mtx, count_Arc2/output.mtx, count_Arc3/output.mtx, count_Chow10/output.mtx, count_HFD/output.mtx, count_Fasted/output.mtx, count_Refed/output.mtx, count_M_Fed/output.mtx, count_M_Fasted/output.mtx, count_F_Fed/output.mtx, count_F_Fasted/output.mtx, count_ds_pred_Arc1/output.mtx, count_ds_pred_Arc2/output.mtx, count_ds_pred_Arc3/output.mtx, count_ds_pred_Chow10/output.mtx, count_ds_pred_HFD/output.mtx, count_ds_pred_Fasted/output.mtx, count_ds_pred_Refed/output.mtx, count_ds_pred_M_Fed/output.mtx, count_ds_pred_M_Fasted/output.mtx, count_ds_pred_F_Fed/output.mtx, count_ds_pred_F_Fasted/output.mtx
+    jobid: 0
+    resources: tmpdir=/tmp
+
+[Sun Jul 18 20:55:04 2021]
+Finished job 0.
+49 of 49 steps (100%) done
+Complete log: /mnt/data/PRJNA360829/.snakemake/log/2021-07-18T204420.957752.snakemake.log
+Building DAG of jobs...
+Nothing to be done.
+Complete log: /mnt/data/PRJNA360829/.snakemake/log/2021-07-18T210304.710830.snakemake.log
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 40
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job                       count    min threads    max threads
+----------------------  -------  -------------  -------------
+all                           1              1              1
+bustools_count_gc            11              1              1
+bustools_downsample_gc       11              1              1
+bustools_predict_gc          11              1              1
+total                        34              1              1
+
+Select jobs to execute...
+
+[Sun Jul 18 21:03:48 2021]
+rule bustools_downsample_gc:
+    input: bus_output_M_Fed/umicorr.bus, bus_output_M_Fed/matrix.ec, bus_output_M_Fed/transcripts.txt
+    output: count_ds_M_Fed/output.mtx
+    log: logs/bustools-count-ds_M_Fed.log
+    jobid: 60
+    wildcards: sample=M_Fed
+    resources: tmpdir=/tmp
+
+bustools count --downsample 0.1 --hist -m --genecounts -e bus_output_M_Fed/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_M_Fed/transcripts.txt -o count_ds_M_Fed/ bus_output_M_Fed/umicorr.bus 2>logs/bustools-count-ds_M_Fed.log
+
+[Sun Jul 18 21:03:48 2021]
+rule bustools_downsample_gc:
+    input: bus_output_M_Fasted/umicorr.bus, bus_output_M_Fasted/matrix.ec, bus_output_M_Fasted/transcripts.txt
+    output: count_ds_M_Fasted/output.mtx
+    log: logs/bustools-count-ds_M_Fasted.log
+    jobid: 62
+    wildcards: sample=M_Fasted
+    resources: tmpdir=/tmp
+
+bustools count --downsample 0.1 --hist -m --genecounts -e bus_output_M_Fasted/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_M_Fasted/transcripts.txt -o count_ds_M_Fasted/ bus_output_M_Fasted/umicorr.bus 2>logs/bustools-count-ds_M_Fasted.log
+
+[Sun Jul 18 21:03:48 2021]
+rule bustools_count_gc:
+    input: bus_output_F_Fasted/umicorr.bus, bus_output_F_Fasted/matrix.ec, bus_output_F_Fasted/transcripts.txt
+    output: count_F_Fasted/output.mtx
+    log: logs/bustools-count_F_Fasted.log
+    jobid: 44
+    wildcards: sample=F_Fasted
+    resources: tmpdir=/tmp
+
+bustools count --hist -m --genecounts -e bus_output_F_Fasted/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_F_Fasted/transcripts.txt -o count_F_Fasted/ bus_output_F_Fasted/umicorr.bus 2>logs/bustools-count_F_Fasted.log
+
+[Sun Jul 18 21:03:48 2021]
+rule bustools_downsample_gc:
+    input: bus_output_Refed/umicorr.bus, bus_output_Refed/matrix.ec, bus_output_Refed/transcripts.txt
+    output: count_ds_Refed/output.mtx
+    log: logs/bustools-count-ds_Refed.log
+    jobid: 58
+    wildcards: sample=Refed
+    resources: tmpdir=/tmp
+
+bustools count --downsample 0.1 --hist -m --genecounts -e bus_output_Refed/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_Refed/transcripts.txt -o count_ds_Refed/ bus_output_Refed/umicorr.bus 2>logs/bustools-count-ds_Refed.log
+
+[Sun Jul 18 21:03:48 2021]
+rule bustools_count_gc:
+    input: bus_output_Arc3/umicorr.bus, bus_output_Arc3/matrix.ec, bus_output_Arc3/transcripts.txt
+    output: count_Arc3/output.mtx
+    log: logs/bustools-count_Arc3.log
+    jobid: 36
+    wildcards: sample=Arc3
+    resources: tmpdir=/tmp
+
+bustools count --hist -m --genecounts -e bus_output_Arc3/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_Arc3/transcripts.txt -o count_Arc3/ bus_output_Arc3/umicorr.bus 2>logs/bustools-count_Arc3.log
+
+[Sun Jul 18 21:03:48 2021]
+rule bustools_count_gc:
+    input: bus_output_Chow10/umicorr.bus, bus_output_Chow10/matrix.ec, bus_output_Chow10/transcripts.txt
+    output: count_Chow10/output.mtx
+    log: logs/bustools-count_Chow10.log
+    jobid: 37
+    wildcards: sample=Chow10
+    resources: tmpdir=/tmp
+
+bustools count --hist -m --genecounts -e bus_output_Chow10/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_Chow10/transcripts.txt -o count_Chow10/ bus_output_Chow10/umicorr.bus 2>logs/bustools-count_Chow10.log
+
+[Sun Jul 18 21:03:48 2021]
+rule bustools_downsample_gc:
+    input: bus_output_Chow10/umicorr.bus, bus_output_Chow10/matrix.ec, bus_output_Chow10/transcripts.txt
+    output: count_ds_Chow10/output.mtx
+    log: logs/bustools-count-ds_Chow10.log
+    jobid: 52
+    wildcards: sample=Chow10
+    resources: tmpdir=/tmp
+
+bustools count --downsample 0.1 --hist -m --genecounts -e bus_output_Chow10/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_Chow10/transcripts.txt -o count_ds_Chow10/ bus_output_Chow10/umicorr.bus 2>logs/bustools-count-ds_Chow10.log
+
+[Sun Jul 18 21:03:48 2021]
+rule bustools_downsample_gc:
+    input: bus_output_HFD/umicorr.bus, bus_output_HFD/matrix.ec, bus_output_HFD/transcripts.txt
+    output: count_ds_HFD/output.mtx
+    log: logs/bustools-count-ds_HFD.log
+    jobid: 54
+    wildcards: sample=HFD
+    resources: tmpdir=/tmp
+
+bustools count --downsample 0.1 --hist -m --genecounts -e bus_output_HFD/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_HFD/transcripts.txt -o count_ds_HFD/ bus_output_HFD/umicorr.bus 2>logs/bustools-count-ds_HFD.log
+
+[Sun Jul 18 21:03:48 2021]
+rule bustools_downsample_gc:
+    input: bus_output_Fasted/umicorr.bus, bus_output_Fasted/matrix.ec, bus_output_Fasted/transcripts.txt
+    output: count_ds_Fasted/output.mtx
+    log: logs/bustools-count-ds_Fasted.log
+    jobid: 56
+    wildcards: sample=Fasted
+    resources: tmpdir=/tmp
+
+bustools count --downsample 0.1 --hist -m --genecounts -e bus_output_Fasted/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_Fasted/transcripts.txt -o count_ds_Fasted/ bus_output_Fasted/umicorr.bus 2>logs/bustools-count-ds_Fasted.log
+
+[Sun Jul 18 21:03:48 2021]
+rule bustools_downsample_gc:
+    input: bus_output_F_Fasted/umicorr.bus, bus_output_F_Fasted/matrix.ec, bus_output_F_Fasted/transcripts.txt
+    output: count_ds_F_Fasted/output.mtx
+    log: logs/bustools-count-ds_F_Fasted.log
+    jobid: 66
+    wildcards: sample=F_Fasted
+    resources: tmpdir=/tmp
+
+bustools count --downsample 0.1 --hist -m --genecounts -e bus_output_F_Fasted/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_F_Fasted/transcripts.txt -o count_ds_F_Fasted/ bus_output_F_Fasted/umicorr.bus 2>logs/bustools-count-ds_F_Fasted.log
+
+[Sun Jul 18 21:03:48 2021]
+rule bustools_count_gc:
+    input: bus_output_HFD/umicorr.bus, bus_output_HFD/matrix.ec, bus_output_HFD/transcripts.txt
+    output: count_HFD/output.mtx
+    log: logs/bustools-count_HFD.log
+    jobid: 38
+    wildcards: sample=HFD
+    resources: tmpdir=/tmp
+
+bustools count --hist -m --genecounts -e bus_output_HFD/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_HFD/transcripts.txt -o count_HFD/ bus_output_HFD/umicorr.bus 2>logs/bustools-count_HFD.log
+
+[Sun Jul 18 21:03:48 2021]
+rule bustools_count_gc:
+    input: bus_output_Fasted/umicorr.bus, bus_output_Fasted/matrix.ec, bus_output_Fasted/transcripts.txt
+    output: count_Fasted/output.mtx
+    log: logs/bustools-count_Fasted.log
+    jobid: 39
+    wildcards: sample=Fasted
+    resources: tmpdir=/tmp
+
+bustools count --hist -m --genecounts -e bus_output_Fasted/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_Fasted/transcripts.txt -o count_Fasted/ bus_output_Fasted/umicorr.bus 2>logs/bustools-count_Fasted.log
+
+[Sun Jul 18 21:03:48 2021]
+rule bustools_count_gc:
+    input: bus_output_Refed/umicorr.bus, bus_output_Refed/matrix.ec, bus_output_Refed/transcripts.txt
+    output: count_Refed/output.mtx
+    log: logs/bustools-count_Refed.log
+    jobid: 40
+    wildcards: sample=Refed
+    resources: tmpdir=/tmp
+
+bustools count --hist -m --genecounts -e bus_output_Refed/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_Refed/transcripts.txt -o count_Refed/ bus_output_Refed/umicorr.bus 2>logs/bustools-count_Refed.log
+
+[Sun Jul 18 21:03:48 2021]
+rule bustools_downsample_gc:
+    input: bus_output_Arc1/umicorr.bus, bus_output_Arc1/matrix.ec, bus_output_Arc1/transcripts.txt
+    output: count_ds_Arc1/output.mtx
+    log: logs/bustools-count-ds_Arc1.log
+    jobid: 46
+    wildcards: sample=Arc1
+    resources: tmpdir=/tmp
+
+bustools count --downsample 0.1 --hist -m --genecounts -e bus_output_Arc1/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_Arc1/transcripts.txt -o count_ds_Arc1/ bus_output_Arc1/umicorr.bus 2>logs/bustools-count-ds_Arc1.log
+
+[Sun Jul 18 21:03:48 2021]
+rule bustools_downsample_gc:
+    input: bus_output_Arc2/umicorr.bus, bus_output_Arc2/matrix.ec, bus_output_Arc2/transcripts.txt
+    output: count_ds_Arc2/output.mtx
+    log: logs/bustools-count-ds_Arc2.log
+    jobid: 48
+    wildcards: sample=Arc2
+    resources: tmpdir=/tmp
+
+bustools count --downsample 0.1 --hist -m --genecounts -e bus_output_Arc2/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_Arc2/transcripts.txt -o count_ds_Arc2/ bus_output_Arc2/umicorr.bus 2>logs/bustools-count-ds_Arc2.log
+
+[Sun Jul 18 21:03:48 2021]
+rule bustools_downsample_gc:
+    input: bus_output_Arc3/umicorr.bus, bus_output_Arc3/matrix.ec, bus_output_Arc3/transcripts.txt
+    output: count_ds_Arc3/output.mtx
+    log: logs/bustools-count-ds_Arc3.log
+    jobid: 50
+    wildcards: sample=Arc3
+    resources: tmpdir=/tmp
+
+bustools count --downsample 0.1 --hist -m --genecounts -e bus_output_Arc3/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_Arc3/transcripts.txt -o count_ds_Arc3/ bus_output_Arc3/umicorr.bus 2>logs/bustools-count-ds_Arc3.log
+
+[Sun Jul 18 21:03:48 2021]
+rule bustools_count_gc:
+    input: bus_output_Arc1/umicorr.bus, bus_output_Arc1/matrix.ec, bus_output_Arc1/transcripts.txt
+    output: count_Arc1/output.mtx
+    log: logs/bustools-count_Arc1.log
+    jobid: 34
+    wildcards: sample=Arc1
+    resources: tmpdir=/tmp
+
+bustools count --hist -m --genecounts -e bus_output_Arc1/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_Arc1/transcripts.txt -o count_Arc1/ bus_output_Arc1/umicorr.bus 2>logs/bustools-count_Arc1.log
+
+[Sun Jul 18 21:03:48 2021]
+rule bustools_count_gc:
+    input: bus_output_M_Fed/umicorr.bus, bus_output_M_Fed/matrix.ec, bus_output_M_Fed/transcripts.txt
+    output: count_M_Fed/output.mtx
+    log: logs/bustools-count_M_Fed.log
+    jobid: 41
+    wildcards: sample=M_Fed
+    resources: tmpdir=/tmp
+
+bustools count --hist -m --genecounts -e bus_output_M_Fed/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_M_Fed/transcripts.txt -o count_M_Fed/ bus_output_M_Fed/umicorr.bus 2>logs/bustools-count_M_Fed.log
+
+[Sun Jul 18 21:03:48 2021]
+rule bustools_count_gc:
+    input: bus_output_Arc2/umicorr.bus, bus_output_Arc2/matrix.ec, bus_output_Arc2/transcripts.txt
+    output: count_Arc2/output.mtx
+    log: logs/bustools-count_Arc2.log
+    jobid: 35
+    wildcards: sample=Arc2
+    resources: tmpdir=/tmp
+
+bustools count --hist -m --genecounts -e bus_output_Arc2/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_Arc2/transcripts.txt -o count_Arc2/ bus_output_Arc2/umicorr.bus 2>logs/bustools-count_Arc2.log
+
+[Sun Jul 18 21:03:48 2021]
+rule bustools_count_gc:
+    input: bus_output_M_Fasted/umicorr.bus, bus_output_M_Fasted/matrix.ec, bus_output_M_Fasted/transcripts.txt
+    output: count_M_Fasted/output.mtx
+    log: logs/bustools-count_M_Fasted.log
+    jobid: 42
+    wildcards: sample=M_Fasted
+    resources: tmpdir=/tmp
+
+bustools count --hist -m --genecounts -e bus_output_M_Fasted/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_M_Fasted/transcripts.txt -o count_M_Fasted/ bus_output_M_Fasted/umicorr.bus 2>logs/bustools-count_M_Fasted.log
+
+[Sun Jul 18 21:03:48 2021]
+rule bustools_downsample_gc:
+    input: bus_output_F_Fed/umicorr.bus, bus_output_F_Fed/matrix.ec, bus_output_F_Fed/transcripts.txt
+    output: count_ds_F_Fed/output.mtx
+    log: logs/bustools-count-ds_F_Fed.log
+    jobid: 64
+    wildcards: sample=F_Fed
+    resources: tmpdir=/tmp
+
+bustools count --downsample 0.1 --hist -m --genecounts -e bus_output_F_Fed/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_F_Fed/transcripts.txt -o count_ds_F_Fed/ bus_output_F_Fed/umicorr.bus 2>logs/bustools-count-ds_F_Fed.log
+
+[Sun Jul 18 21:03:48 2021]
+rule bustools_count_gc:
+    input: bus_output_F_Fed/umicorr.bus, bus_output_F_Fed/matrix.ec, bus_output_F_Fed/transcripts.txt
+    output: count_F_Fed/output.mtx
+    log: logs/bustools-count_F_Fed.log
+    jobid: 43
+    wildcards: sample=F_Fed
+    resources: tmpdir=/tmp
+
+bustools count --hist -m --genecounts -e bus_output_F_Fed/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_F_Fed/transcripts.txt -o count_F_Fed/ bus_output_F_Fed/umicorr.bus 2>logs/bustools-count_F_Fed.log
+[Sun Jul 18 21:04:04 2021]
+Finished job 37.
+1 of 34 steps (3%) done
+[Sun Jul 18 21:04:05 2021]
+Finished job 36.
+2 of 34 steps (6%) done
+[Sun Jul 18 21:04:06 2021]
+Finished job 38.
+3 of 34 steps (9%) done
+[Sun Jul 18 21:04:06 2021]
+Finished job 52.
+4 of 34 steps (12%) done
+Select jobs to execute...
+
+[Sun Jul 18 21:04:06 2021]
+rule bustools_predict_gc:
+    input: count_ds_Chow10/output.mtx
+    output: count_ds_pred_Chow10/output.mtx
+    log: logs/bustools-predict_Chow10.log
+    jobid: 51
+    wildcards: sample=Chow10
+    resources: tmpdir=/tmp
+
+bustools predict -t 10 -o count_ds_pred_Chow10/ count_ds_Chow10/ 2>logs/bustools-predict_Chow10.log
+[Sun Jul 18 21:04:07 2021]
+Finished job 50.
+5 of 34 steps (15%) done
+Select jobs to execute...
+
+[Sun Jul 18 21:04:07 2021]
+rule bustools_predict_gc:
+    input: count_ds_Arc3/output.mtx
+    output: count_ds_pred_Arc3/output.mtx
+    log: logs/bustools-predict_Arc3.log
+    jobid: 49
+    wildcards: sample=Arc3
+    resources: tmpdir=/tmp
+
+bustools predict -t 10 -o count_ds_pred_Arc3/ count_ds_Arc3/ 2>logs/bustools-predict_Arc3.log
+[Sun Jul 18 21:04:07 2021]
+Finished job 35.
+6 of 34 steps (18%) done
+[Sun Jul 18 21:04:08 2021]
+Finished job 54.
+7 of 34 steps (21%) done
+Select jobs to execute...
+
+[Sun Jul 18 21:04:08 2021]
+rule bustools_predict_gc:
+    input: count_ds_HFD/output.mtx
+    output: count_ds_pred_HFD/output.mtx
+    log: logs/bustools-predict_HFD.log
+    jobid: 53
+    wildcards: sample=HFD
+    resources: tmpdir=/tmp
+
+bustools predict -t 10 -o count_ds_pred_HFD/ count_ds_HFD/ 2>logs/bustools-predict_HFD.log
+[Sun Jul 18 21:04:09 2021]
+Finished job 51.
+8 of 34 steps (24%) done
+[Sun Jul 18 21:04:09 2021]
+Finished job 48.
+9 of 34 steps (26%) done
+Select jobs to execute...
+
+[Sun Jul 18 21:04:09 2021]
+rule bustools_predict_gc:
+    input: count_ds_Arc2/output.mtx
+    output: count_ds_pred_Arc2/output.mtx
+    log: logs/bustools-predict_Arc2.log
+    jobid: 47
+    wildcards: sample=Arc2
+    resources: tmpdir=/tmp
+
+bustools predict -t 10 -o count_ds_pred_Arc2/ count_ds_Arc2/ 2>logs/bustools-predict_Arc2.log
+[Sun Jul 18 21:04:10 2021]
+Finished job 49.
+10 of 34 steps (29%) done
+[Sun Jul 18 21:04:11 2021]
+Finished job 53.
+11 of 34 steps (32%) done
+[Sun Jul 18 21:04:12 2021]
+Finished job 47.
+12 of 34 steps (35%) done
+[Sun Jul 18 21:04:15 2021]
+Finished job 60.
+13 of 34 steps (38%) done
+[Sun Jul 18 21:04:15 2021]
+Finished job 41.
+14 of 34 steps (41%) done
+Select jobs to execute...
+
+[Sun Jul 18 21:04:15 2021]
+rule bustools_predict_gc:
+    input: count_ds_M_Fed/output.mtx
+    output: count_ds_pred_M_Fed/output.mtx
+    log: logs/bustools-predict_M_Fed.log
+    jobid: 59
+    wildcards: sample=M_Fed
+    resources: tmpdir=/tmp
+
+bustools predict -t 10 -o count_ds_pred_M_Fed/ count_ds_M_Fed/ 2>logs/bustools-predict_M_Fed.log
+[Sun Jul 18 21:04:15 2021]
+Finished job 34.
+15 of 34 steps (44%) done
+[Sun Jul 18 21:04:18 2021]
+Finished job 44.
+16 of 34 steps (47%) done
+[Sun Jul 18 21:04:19 2021]
+Finished job 42.
+17 of 34 steps (50%) done
+[Sun Jul 18 21:04:19 2021]
+Finished job 62.
+18 of 34 steps (53%) done
+Select jobs to execute...
+
+[Sun Jul 18 21:04:19 2021]
+rule bustools_predict_gc:
+    input: count_ds_M_Fasted/output.mtx
+    output: count_ds_pred_M_Fasted/output.mtx
+    log: logs/bustools-predict_M_Fasted.log
+    jobid: 61
+    wildcards: sample=M_Fasted
+    resources: tmpdir=/tmp
+
+bustools predict -t 10 -o count_ds_pred_M_Fasted/ count_ds_M_Fasted/ 2>logs/bustools-predict_M_Fasted.log
+[Sun Jul 18 21:04:19 2021]
+Finished job 59.
+19 of 34 steps (56%) done
+[Sun Jul 18 21:04:20 2021]
+Finished job 46.
+20 of 34 steps (59%) done
+Select jobs to execute...
+
+[Sun Jul 18 21:04:20 2021]
+rule bustools_predict_gc:
+    input: count_ds_Arc1/output.mtx
+    output: count_ds_pred_Arc1/output.mtx
+    log: logs/bustools-predict_Arc1.log
+    jobid: 45
+    wildcards: sample=Arc1
+    resources: tmpdir=/tmp
+
+bustools predict -t 10 -o count_ds_pred_Arc1/ count_ds_Arc1/ 2>logs/bustools-predict_Arc1.log
+[Sun Jul 18 21:04:20 2021]
+Finished job 66.
+21 of 34 steps (62%) done
+Select jobs to execute...
+
+[Sun Jul 18 21:04:20 2021]
+rule bustools_predict_gc:
+    input: count_ds_F_Fasted/output.mtx
+    output: count_ds_pred_F_Fasted/output.mtx
+    log: logs/bustools-predict_F_Fasted.log
+    jobid: 65
+    wildcards: sample=F_Fasted
+    resources: tmpdir=/tmp
+
+bustools predict -t 10 -o count_ds_pred_F_Fasted/ count_ds_F_Fasted/ 2>logs/bustools-predict_F_Fasted.log
+[Sun Jul 18 21:04:23 2021]
+Finished job 61.
+22 of 34 steps (65%) done
+[Sun Jul 18 21:04:23 2021]
+Finished job 45.
+23 of 34 steps (68%) done
+[Sun Jul 18 21:04:24 2021]
+Finished job 65.
+24 of 34 steps (71%) done
+[Sun Jul 18 21:04:24 2021]
+Finished job 43.
+25 of 34 steps (74%) done
+[Sun Jul 18 21:04:24 2021]
+Finished job 64.
+26 of 34 steps (76%) done
+Select jobs to execute...
+
+[Sun Jul 18 21:04:24 2021]
+rule bustools_predict_gc:
+    input: count_ds_F_Fed/output.mtx
+    output: count_ds_pred_F_Fed/output.mtx
+    log: logs/bustools-predict_F_Fed.log
+    jobid: 63
+    wildcards: sample=F_Fed
+    resources: tmpdir=/tmp
+
+bustools predict -t 10 -o count_ds_pred_F_Fed/ count_ds_F_Fed/ 2>logs/bustools-predict_F_Fed.log
+[Sun Jul 18 21:04:26 2021]
+Finished job 63.
+27 of 34 steps (79%) done
+[Sun Jul 18 21:04:35 2021]
+Finished job 39.
+28 of 34 steps (82%) done
+[Sun Jul 18 21:04:36 2021]
+Finished job 40.
+29 of 34 steps (85%) done
+[Sun Jul 18 21:04:38 2021]
+Finished job 56.
+30 of 34 steps (88%) done
+Select jobs to execute...
+
+[Sun Jul 18 21:04:39 2021]
+rule bustools_predict_gc:
+    input: count_ds_Fasted/output.mtx
+    output: count_ds_pred_Fasted/output.mtx
+    log: logs/bustools-predict_Fasted.log
+    jobid: 55
+    wildcards: sample=Fasted
+    resources: tmpdir=/tmp
+
+bustools predict -t 10 -o count_ds_pred_Fasted/ count_ds_Fasted/ 2>logs/bustools-predict_Fasted.log
+[Sun Jul 18 21:04:40 2021]
+Finished job 58.
+31 of 34 steps (91%) done
+Select jobs to execute...
+
+[Sun Jul 18 21:04:40 2021]
+rule bustools_predict_gc:
+    input: count_ds_Refed/output.mtx
+    output: count_ds_pred_Refed/output.mtx
+    log: logs/bustools-predict_Refed.log
+    jobid: 57
+    wildcards: sample=Refed
+    resources: tmpdir=/tmp
+
+bustools predict -t 10 -o count_ds_pred_Refed/ count_ds_Refed/ 2>logs/bustools-predict_Refed.log
+[Sun Jul 18 21:04:42 2021]
+Finished job 55.
+32 of 34 steps (94%) done
+[Sun Jul 18 21:04:43 2021]
+Finished job 57.
+33 of 34 steps (97%) done
+Select jobs to execute...
+
+[Sun Jul 18 21:04:43 2021]
+localrule all:
+    input: bus_output_Arc1/output.bus, bus_output_Arc2/output.bus, bus_output_Arc3/output.bus, bus_output_Chow10/output.bus, bus_output_HFD/output.bus, bus_output_Fasted/output.bus, bus_output_Refed/output.bus, bus_output_M_Fed/output.bus, bus_output_M_Fasted/output.bus, bus_output_F_Fed/output.bus, bus_output_F_Fasted/output.bus, bus_output_Arc1/umicorr.bus, bus_output_Arc2/umicorr.bus, bus_output_Arc3/umicorr.bus, bus_output_Chow10/umicorr.bus, bus_output_HFD/umicorr.bus, bus_output_Fasted/umicorr.bus, bus_output_Refed/umicorr.bus, bus_output_M_Fed/umicorr.bus, bus_output_M_Fasted/umicorr.bus, bus_output_F_Fed/umicorr.bus, bus_output_F_Fasted/umicorr.bus, count_Arc1/output.mtx, count_Arc2/output.mtx, count_Arc3/output.mtx, count_Chow10/output.mtx, count_HFD/output.mtx, count_Fasted/output.mtx, count_Refed/output.mtx, count_M_Fed/output.mtx, count_M_Fasted/output.mtx, count_F_Fed/output.mtx, count_F_Fasted/output.mtx, count_ds_pred_Arc1/output.mtx, count_ds_pred_Arc2/output.mtx, count_ds_pred_Arc3/output.mtx, count_ds_pred_Chow10/output.mtx, count_ds_pred_HFD/output.mtx, count_ds_pred_Fasted/output.mtx, count_ds_pred_Refed/output.mtx, count_ds_pred_M_Fed/output.mtx, count_ds_pred_M_Fasted/output.mtx, count_ds_pred_F_Fed/output.mtx, count_ds_pred_F_Fasted/output.mtx
+    jobid: 0
+    resources: tmpdir=/tmp
+
+[Sun Jul 18 21:04:43 2021]
+Finished job 0.
+34 of 34 steps (100%) done
+Complete log: /mnt/data/PRJNA360829/.snakemake/log/2021-07-18T210347.531665.snakemake.log
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 40
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job                       count    min threads    max threads
+----------------------  -------  -------------  -------------
+all                           1              1              1
+bustools_collapse_gc         11              1              1
+bustools_count_gc            11              1              1
+bustools_downsample_gc       11              1              1
+bustools_predict_gc          11              1              1
+bustools_umicorrect_gc       11              1              1
+total                        56              1              1
+
+Select jobs to execute...
+
+[Sun Jul 18 21:17:00 2021]
+rule bustools_collapse_gc:
+    input: bus_output_Refed/sort.bus, bus_output_Refed/matrix.ec, bus_output_Refed/transcripts.txt
+    output: bus_output_Refed/coll.bus
+    log: logs/bustools-umicorr_Refed.log
+    jobid: 31
+    wildcards: sample=Refed
+    resources: tmpdir=/tmp
+
+bustools collapse -e bus_output_Refed/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_Refed/transcripts.txt -o bus_outputRefed/coll bus_output_Refed/sort.bus 2>logs/bustools-umicorr_Refed.log
+
+[Sun Jul 18 21:17:00 2021]
+rule bustools_collapse_gc:
+    input: bus_output_Arc2/sort.bus, bus_output_Arc2/matrix.ec, bus_output_Arc2/transcripts.txt
+    output: bus_output_Arc2/coll.bus
+    log: logs/bustools-umicorr_Arc2.log
+    jobid: 16
+    wildcards: sample=Arc2
+    resources: tmpdir=/tmp
+
+bustools collapse -e bus_output_Arc2/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_Arc2/transcripts.txt -o bus_outputArc2/coll bus_output_Arc2/sort.bus 2>logs/bustools-umicorr_Arc2.log
+
+[Sun Jul 18 21:17:00 2021]
+rule bustools_collapse_gc:
+    input: bus_output_HFD/sort.bus, bus_output_HFD/matrix.ec, bus_output_HFD/transcripts.txt
+    output: bus_output_HFD/coll.bus
+    log: logs/bustools-umicorr_HFD.log
+    jobid: 25
+    wildcards: sample=HFD
+    resources: tmpdir=/tmp
+
+bustools collapse -e bus_output_HFD/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_HFD/transcripts.txt -o bus_outputHFD/coll bus_output_HFD/sort.bus 2>logs/bustools-umicorr_HFD.log
+
+[Sun Jul 18 21:17:00 2021]
+rule bustools_collapse_gc:
+    input: bus_output_F_Fed/sort.bus, bus_output_F_Fed/matrix.ec, bus_output_F_Fed/transcripts.txt
+    output: bus_output_F_Fed/coll.bus
+    log: logs/bustools-umicorr_F_Fed.log
+    jobid: 40
+    wildcards: sample=F_Fed
+    resources: tmpdir=/tmp
+
+bustools collapse -e bus_output_F_Fed/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_F_Fed/transcripts.txt -o bus_outputF_Fed/coll bus_output_F_Fed/sort.bus 2>logs/bustools-umicorr_F_Fed.log
+
+[Sun Jul 18 21:17:00 2021]
+rule bustools_collapse_gc:
+    input: bus_output_Chow10/sort.bus, bus_output_Chow10/matrix.ec, bus_output_Chow10/transcripts.txt
+    output: bus_output_Chow10/coll.bus
+    log: logs/bustools-umicorr_Chow10.log
+    jobid: 22
+    wildcards: sample=Chow10
+    resources: tmpdir=/tmp
+
+bustools collapse -e bus_output_Chow10/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_Chow10/transcripts.txt -o bus_outputChow10/coll bus_output_Chow10/sort.bus 2>logs/bustools-umicorr_Chow10.log
+
+[Sun Jul 18 21:17:00 2021]
+rule bustools_collapse_gc:
+    input: bus_output_M_Fasted/sort.bus, bus_output_M_Fasted/matrix.ec, bus_output_M_Fasted/transcripts.txt
+    output: bus_output_M_Fasted/coll.bus
+    log: logs/bustools-umicorr_M_Fasted.log
+    jobid: 37
+    wildcards: sample=M_Fasted
+    resources: tmpdir=/tmp
+
+bustools collapse -e bus_output_M_Fasted/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_M_Fasted/transcripts.txt -o bus_outputM_Fasted/coll bus_output_M_Fasted/sort.bus 2>logs/bustools-umicorr_M_Fasted.log
+
+[Sun Jul 18 21:17:00 2021]
+rule bustools_collapse_gc:
+    input: bus_output_Arc3/sort.bus, bus_output_Arc3/matrix.ec, bus_output_Arc3/transcripts.txt
+    output: bus_output_Arc3/coll.bus
+    log: logs/bustools-umicorr_Arc3.log
+    jobid: 19
+    wildcards: sample=Arc3
+    resources: tmpdir=/tmp
+
+bustools collapse -e bus_output_Arc3/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_Arc3/transcripts.txt -o bus_outputArc3/coll bus_output_Arc3/sort.bus 2>logs/bustools-umicorr_Arc3.log
+
+[Sun Jul 18 21:17:00 2021]
+rule bustools_collapse_gc:
+    input: bus_output_M_Fed/sort.bus, bus_output_M_Fed/matrix.ec, bus_output_M_Fed/transcripts.txt
+    output: bus_output_M_Fed/coll.bus
+    log: logs/bustools-umicorr_M_Fed.log
+    jobid: 34
+    wildcards: sample=M_Fed
+    resources: tmpdir=/tmp
+
+bustools collapse -e bus_output_M_Fed/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_M_Fed/transcripts.txt -o bus_outputM_Fed/coll bus_output_M_Fed/sort.bus 2>logs/bustools-umicorr_M_Fed.log
+
+[Sun Jul 18 21:17:00 2021]
+rule bustools_collapse_gc:
+    input: bus_output_Arc1/sort.bus, bus_output_Arc1/matrix.ec, bus_output_Arc1/transcripts.txt
+    output: bus_output_Arc1/coll.bus
+    log: logs/bustools-umicorr_Arc1.log
+    jobid: 13
+    wildcards: sample=Arc1
+    resources: tmpdir=/tmp
+
+bustools collapse -e bus_output_Arc1/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_Arc1/transcripts.txt -o bus_outputArc1/coll bus_output_Arc1/sort.bus 2>logs/bustools-umicorr_Arc1.log
+
+[Sun Jul 18 21:17:00 2021]
+rule bustools_collapse_gc:
+    input: bus_output_Fasted/sort.bus, bus_output_Fasted/matrix.ec, bus_output_Fasted/transcripts.txt
+    output: bus_output_Fasted/coll.bus
+    log: logs/bustools-umicorr_Fasted.log
+    jobid: 28
+    wildcards: sample=Fasted
+    resources: tmpdir=/tmp
+
+bustools collapse -e bus_output_Fasted/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_Fasted/transcripts.txt -o bus_outputFasted/coll bus_output_Fasted/sort.bus 2>logs/bustools-umicorr_Fasted.log
+
+[Sun Jul 18 21:17:00 2021]
+rule bustools_collapse_gc:
+    input: bus_output_F_Fasted/sort.bus, bus_output_F_Fasted/matrix.ec, bus_output_F_Fasted/transcripts.txt
+    output: bus_output_F_Fasted/coll.bus
+    log: logs/bustools-umicorr_F_Fasted.log
+    jobid: 43
+    wildcards: sample=F_Fasted
+    resources: tmpdir=/tmp
+
+bustools collapse -e bus_output_F_Fasted/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_F_Fasted/transcripts.txt -o bus_outputF_Fasted/coll bus_output_F_Fasted/sort.bus 2>logs/bustools-umicorr_F_Fasted.log
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 76 of /mnt/data/PRJNA360829/Snakefile:
+Job Missing files after 5 seconds:
+bus_output_M_Fed/coll.bus
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 34 completed successfully, but some output files are missing. 34
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 76 of /mnt/data/PRJNA360829/Snakefile:
+Job Missing files after 5 seconds:
+bus_output_M_Fasted/coll.bus
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 37 completed successfully, but some output files are missing. 37
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 76 of /mnt/data/PRJNA360829/Snakefile:
+Job Missing files after 5 seconds:
+bus_output_F_Fasted/coll.bus
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 43 completed successfully, but some output files are missing. 43
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 76 of /mnt/data/PRJNA360829/Snakefile:
+Job Missing files after 5 seconds:
+bus_output_Arc2/coll.bus
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 16 completed successfully, but some output files are missing. 16
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 76 of /mnt/data/PRJNA360829/Snakefile:
+Job Missing files after 5 seconds:
+bus_output_Arc3/coll.bus
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 19 completed successfully, but some output files are missing. 19
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 76 of /mnt/data/PRJNA360829/Snakefile:
+Job Missing files after 5 seconds:
+bus_output_Chow10/coll.bus
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 22 completed successfully, but some output files are missing. 22
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 76 of /mnt/data/PRJNA360829/Snakefile:
+Job Missing files after 5 seconds:
+bus_output_F_Fed/coll.bus
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 40 completed successfully, but some output files are missing. 40
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 76 of /mnt/data/PRJNA360829/Snakefile:
+Job Missing files after 5 seconds:
+bus_output_HFD/coll.bus
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 25 completed successfully, but some output files are missing. 25
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 76 of /mnt/data/PRJNA360829/Snakefile:
+Job Missing files after 5 seconds:
+bus_output_Arc1/coll.bus
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 13 completed successfully, but some output files are missing. 13
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 76 of /mnt/data/PRJNA360829/Snakefile:
+Job Missing files after 5 seconds:
+bus_output_Fasted/coll.bus
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 28 completed successfully, but some output files are missing. 28
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 76 of /mnt/data/PRJNA360829/Snakefile:
+Job Missing files after 5 seconds:
+bus_output_Refed/coll.bus
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 31 completed successfully, but some output files are missing. 31
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /mnt/data/PRJNA360829/.snakemake/log/2021-07-18T211659.746364.snakemake.log
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 40
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job                       count    min threads    max threads
+----------------------  -------  -------------  -------------
+all                           1              1              1
+bustools_collapse_gc         11              1              1
+bustools_count_gc            11              1              1
+bustools_downsample_gc       11              1              1
+bustools_predict_gc          11              1              1
+bustools_umicorrect_gc       11              1              1
+total                        56              1              1
+
+Select jobs to execute...
+
+[Sun Jul 18 21:27:57 2021]
+rule bustools_collapse_gc:
+    input: bus_output_Refed/sort.bus, bus_output_Refed/matrix.ec, bus_output_Refed/transcripts.txt
+    output: bus_output_Refed/coll.bus
+    log: logs/bustools-umicorr_Refed.log
+    jobid: 31
+    wildcards: sample=Refed
+    resources: tmpdir=/tmp
+
+bustools collapse -e bus_output_Refed/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_Refed/transcripts.txt -o bus_output_Refed/coll bus_output_Refed/sort.bus 2>logs/bustools-umicorr_Refed.log
+
+[Sun Jul 18 21:27:57 2021]
+rule bustools_collapse_gc:
+    input: bus_output_HFD/sort.bus, bus_output_HFD/matrix.ec, bus_output_HFD/transcripts.txt
+    output: bus_output_HFD/coll.bus
+    log: logs/bustools-umicorr_HFD.log
+    jobid: 25
+    wildcards: sample=HFD
+    resources: tmpdir=/tmp
+
+bustools collapse -e bus_output_HFD/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_HFD/transcripts.txt -o bus_output_HFD/coll bus_output_HFD/sort.bus 2>logs/bustools-umicorr_HFD.log
+
+[Sun Jul 18 21:27:57 2021]
+rule bustools_collapse_gc:
+    input: bus_output_Arc2/sort.bus, bus_output_Arc2/matrix.ec, bus_output_Arc2/transcripts.txt
+    output: bus_output_Arc2/coll.bus
+    log: logs/bustools-umicorr_Arc2.log
+    jobid: 16
+    wildcards: sample=Arc2
+    resources: tmpdir=/tmp
+
+bustools collapse -e bus_output_Arc2/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_Arc2/transcripts.txt -o bus_output_Arc2/coll bus_output_Arc2/sort.bus 2>logs/bustools-umicorr_Arc2.log
+
+[Sun Jul 18 21:27:57 2021]
+rule bustools_collapse_gc:
+    input: bus_output_F_Fed/sort.bus, bus_output_F_Fed/matrix.ec, bus_output_F_Fed/transcripts.txt
+    output: bus_output_F_Fed/coll.bus
+    log: logs/bustools-umicorr_F_Fed.log
+    jobid: 40
+    wildcards: sample=F_Fed
+    resources: tmpdir=/tmp
+
+bustools collapse -e bus_output_F_Fed/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_F_Fed/transcripts.txt -o bus_output_F_Fed/coll bus_output_F_Fed/sort.bus 2>logs/bustools-umicorr_F_Fed.log
+
+[Sun Jul 18 21:27:57 2021]
+rule bustools_collapse_gc:
+    input: bus_output_Chow10/sort.bus, bus_output_Chow10/matrix.ec, bus_output_Chow10/transcripts.txt
+    output: bus_output_Chow10/coll.bus
+    log: logs/bustools-umicorr_Chow10.log
+    jobid: 22
+    wildcards: sample=Chow10
+    resources: tmpdir=/tmp
+
+bustools collapse -e bus_output_Chow10/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_Chow10/transcripts.txt -o bus_output_Chow10/coll bus_output_Chow10/sort.bus 2>logs/bustools-umicorr_Chow10.log
+
+[Sun Jul 18 21:27:57 2021]
+rule bustools_collapse_gc:
+    input: bus_output_M_Fasted/sort.bus, bus_output_M_Fasted/matrix.ec, bus_output_M_Fasted/transcripts.txt
+    output: bus_output_M_Fasted/coll.bus
+    log: logs/bustools-umicorr_M_Fasted.log
+    jobid: 37
+    wildcards: sample=M_Fasted
+    resources: tmpdir=/tmp
+
+bustools collapse -e bus_output_M_Fasted/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_M_Fasted/transcripts.txt -o bus_output_M_Fasted/coll bus_output_M_Fasted/sort.bus 2>logs/bustools-umicorr_M_Fasted.log
+
+[Sun Jul 18 21:27:57 2021]
+rule bustools_collapse_gc:
+    input: bus_output_Arc3/sort.bus, bus_output_Arc3/matrix.ec, bus_output_Arc3/transcripts.txt
+    output: bus_output_Arc3/coll.bus
+    log: logs/bustools-umicorr_Arc3.log
+    jobid: 19
+    wildcards: sample=Arc3
+    resources: tmpdir=/tmp
+
+bustools collapse -e bus_output_Arc3/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_Arc3/transcripts.txt -o bus_output_Arc3/coll bus_output_Arc3/sort.bus 2>logs/bustools-umicorr_Arc3.log
+
+[Sun Jul 18 21:27:57 2021]
+rule bustools_collapse_gc:
+    input: bus_output_M_Fed/sort.bus, bus_output_M_Fed/matrix.ec, bus_output_M_Fed/transcripts.txt
+    output: bus_output_M_Fed/coll.bus
+    log: logs/bustools-umicorr_M_Fed.log
+    jobid: 34
+    wildcards: sample=M_Fed
+    resources: tmpdir=/tmp
+
+bustools collapse -e bus_output_M_Fed/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_M_Fed/transcripts.txt -o bus_output_M_Fed/coll bus_output_M_Fed/sort.bus 2>logs/bustools-umicorr_M_Fed.log
+
+[Sun Jul 18 21:27:57 2021]
+rule bustools_collapse_gc:
+    input: bus_output_Arc1/sort.bus, bus_output_Arc1/matrix.ec, bus_output_Arc1/transcripts.txt
+    output: bus_output_Arc1/coll.bus
+    log: logs/bustools-umicorr_Arc1.log
+    jobid: 13
+    wildcards: sample=Arc1
+    resources: tmpdir=/tmp
+
+bustools collapse -e bus_output_Arc1/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_Arc1/transcripts.txt -o bus_output_Arc1/coll bus_output_Arc1/sort.bus 2>logs/bustools-umicorr_Arc1.log
+
+[Sun Jul 18 21:27:57 2021]
+rule bustools_collapse_gc:
+    input: bus_output_Fasted/sort.bus, bus_output_Fasted/matrix.ec, bus_output_Fasted/transcripts.txt
+    output: bus_output_Fasted/coll.bus
+    log: logs/bustools-umicorr_Fasted.log
+    jobid: 28
+    wildcards: sample=Fasted
+    resources: tmpdir=/tmp
+
+bustools collapse -e bus_output_Fasted/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_Fasted/transcripts.txt -o bus_output_Fasted/coll bus_output_Fasted/sort.bus 2>logs/bustools-umicorr_Fasted.log
+
+[Sun Jul 18 21:27:57 2021]
+rule bustools_collapse_gc:
+    input: bus_output_F_Fasted/sort.bus, bus_output_F_Fasted/matrix.ec, bus_output_F_Fasted/transcripts.txt
+    output: bus_output_F_Fasted/coll.bus
+    log: logs/bustools-umicorr_F_Fasted.log
+    jobid: 43
+    wildcards: sample=F_Fasted
+    resources: tmpdir=/tmp
+
+bustools collapse -e bus_output_F_Fasted/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes.txt -t bus_output_F_Fasted/transcripts.txt -o bus_output_F_Fasted/coll bus_output_F_Fasted/sort.bus 2>logs/bustools-umicorr_F_Fasted.log
+[Sun Jul 18 21:28:02 2021]
+Finished job 34.
+1 of 56 steps (2%) done
+Select jobs to execute...
+[Sun Jul 18 21:28:02 2021]
+Finished job 16.
+2 of 56 steps (4%) done
+
+[Sun Jul 18 21:28:02 2021]
+rule bustools_umicorrect_gc:
+    input: bus_output_M_Fed/coll.bus, bus_output_M_Fed/matrix.ec, bus_output_M_Fed/transcripts.txt
+    output: bus_output_M_Fed/umicorr.bus
+    log: logs/bustools-umicorr_M_Fed.log
+    jobid: 33
+    wildcards: sample=M_Fed
+    resources: tmpdir=/tmp
+
+bustools umicorrect -o bus_output_M_Fed/umicorr.bus bus_output_M_Fed/coll.bus 2>logs/bustools-umicorr_M_Fed.log
+Select jobs to execute...
+Usage: bustools umicorrect [options] sorted-bus-files
+
+Options: 
+-o, --output          Output directory gene matrix files
+-p, --pipe            Write to standard output
+-g, --genemap         File for mapping transcripts to genes
+-e, --ecmap           File for mapping equivalence classes to transcripts
+-t, --txnames         File with names of transcripts
+
+[Sun Jul 18 21:28:02 2021]
+Error in rule bustools_umicorrect_gc:
+    jobid: 33
+    output: bus_output_M_Fed/umicorr.bus
+    log: logs/bustools-umicorr_M_Fed.log (check log file(s) for error message)
+    shell:
+        bustools umicorrect -o bus_output_M_Fed/umicorr.bus bus_output_M_Fed/coll.bus 2>logs/bustools-umicorr_M_Fed.log
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job bustools_umicorrect_gc since they might be corrupted:
+bus_output_M_Fed/umicorr.bus
+
+[Sun Jul 18 21:28:02 2021]
+rule bustools_umicorrect_gc:
+    input: bus_output_Arc2/coll.bus, bus_output_Arc2/matrix.ec, bus_output_Arc2/transcripts.txt
+    output: bus_output_Arc2/umicorr.bus
+    log: logs/bustools-umicorr_Arc2.log
+    jobid: 15
+    wildcards: sample=Arc2
+    resources: tmpdir=/tmp
+
+bustools umicorrect -o bus_output_Arc2/umicorr.bus bus_output_Arc2/coll.bus 2>logs/bustools-umicorr_Arc2.log
+Usage: bustools umicorrect [options] sorted-bus-files
+
+Options: 
+-o, --output          Output directory gene matrix files
+-p, --pipe            Write to standard output
+-g, --genemap         File for mapping transcripts to genes
+-e, --ecmap           File for mapping equivalence classes to transcripts
+-t, --txnames         File with names of transcripts
+
+[Sun Jul 18 21:28:02 2021]
+Error in rule bustools_umicorrect_gc:
+    jobid: 15
+    output: bus_output_Arc2/umicorr.bus
+    log: logs/bustools-umicorr_Arc2.log (check log file(s) for error message)
+    shell:
+        bustools umicorrect -o bus_output_Arc2/umicorr.bus bus_output_Arc2/coll.bus 2>logs/bustools-umicorr_Arc2.log
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job bustools_umicorrect_gc since they might be corrupted:
+bus_output_Arc2/umicorr.bus
+[Sun Jul 18 21:28:02 2021]
+Finished job 43.
+3 of 56 steps (5%) done
+[Sun Jul 18 21:28:03 2021]
+Finished job 37.
+4 of 56 steps (7%) done
+[Sun Jul 18 21:28:03 2021]
+Finished job 22.
+5 of 56 steps (9%) done
+[Sun Jul 18 21:28:03 2021]
+Finished job 19.
+6 of 56 steps (11%) done
+[Sun Jul 18 21:28:03 2021]
+Finished job 25.
+7 of 56 steps (12%) done
+[Sun Jul 18 21:28:03 2021]
+Finished job 40.
+8 of 56 steps (14%) done
+[Sun Jul 18 21:28:04 2021]
+Finished job 13.
+9 of 56 steps (16%) done
+[Sun Jul 18 21:28:05 2021]
+Finished job 28.
+10 of 56 steps (18%) done
+[Sun Jul 18 21:28:05 2021]
+Finished job 31.
+11 of 56 steps (20%) done
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /mnt/data/PRJNA360829/.snakemake/log/2021-07-18T212756.164192.snakemake.log
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 40
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job                       count    min threads    max threads
+----------------------  -------  -------------  -------------
+all                           1              1              1
+bustools_count_gc            11              1              1
+bustools_downsample_gc       11              1              1
+bustools_predict_gc          11              1              1
+bustools_umicorrect_gc       11              1              1
+total                        45              1              1
+
+Select jobs to execute...
+
+[Sun Jul 18 21:34:05 2021]
+rule bustools_umicorrect_gc:
+    input: bus_output_Arc2/sort.bus, bus_output_Arc2/matrix.ec, bus_output_Arc2/transcripts.txt
+    output: bus_output_Arc2/umicorr.bus
+    log: logs/bustools-umicorr_Arc2.log
+    jobid: 14
+    wildcards: sample=Arc2
+    resources: tmpdir=/tmp
+
+bustools umicorrect  -e bus_output_Arc2/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_Arc2/transcripts.txt -o bus_output_Arc2/umicorr.bus bus_output_Arc2/sort.bus 
+
+[Sun Jul 18 21:34:05 2021]
+rule bustools_umicorrect_gc:
+    input: bus_output_Arc3/sort.bus, bus_output_Arc3/matrix.ec, bus_output_Arc3/transcripts.txt
+    output: bus_output_Arc3/umicorr.bus
+    log: logs/bustools-umicorr_Arc3.log
+    jobid: 16
+    wildcards: sample=Arc3
+    resources: tmpdir=/tmp
+
+bustools umicorrect  -e bus_output_Arc3/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_Arc3/transcripts.txt -o bus_output_Arc3/umicorr.bus bus_output_Arc3/sort.bus 
+
+[Sun Jul 18 21:34:05 2021]
+rule bustools_umicorrect_gc:
+    input: bus_output_Chow10/sort.bus, bus_output_Chow10/matrix.ec, bus_output_Chow10/transcripts.txt
+    output: bus_output_Chow10/umicorr.bus
+    log: logs/bustools-umicorr_Chow10.log
+    jobid: 18
+    wildcards: sample=Chow10
+    resources: tmpdir=/tmp
+
+bustools umicorrect  -e bus_output_Chow10/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_Chow10/transcripts.txt -o bus_output_Chow10/umicorr.bus bus_output_Chow10/sort.bus 
+
+[Sun Jul 18 21:34:05 2021]
+rule bustools_umicorrect_gc:
+    input: bus_output_Arc1/sort.bus, bus_output_Arc1/matrix.ec, bus_output_Arc1/transcripts.txt
+    output: bus_output_Arc1/umicorr.bus
+    log: logs/bustools-umicorr_Arc1.log
+    jobid: 12
+    wildcards: sample=Arc1
+    resources: tmpdir=/tmp
+
+bustools umicorrect  -e bus_output_Arc1/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_Arc1/transcripts.txt -o bus_output_Arc1/umicorr.bus bus_output_Arc1/sort.bus 
+
+[Sun Jul 18 21:34:05 2021]
+rule bustools_umicorrect_gc:
+    input: bus_output_HFD/sort.bus, bus_output_HFD/matrix.ec, bus_output_HFD/transcripts.txt
+    output: bus_output_HFD/umicorr.bus
+    log: logs/bustools-umicorr_HFD.log
+    jobid: 20
+    wildcards: sample=HFD
+    resources: tmpdir=/tmp
+
+bustools umicorrect  -e bus_output_HFD/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_HFD/transcripts.txt -o bus_output_HFD/umicorr.bus bus_output_HFD/sort.bus 
+
+[Sun Jul 18 21:34:05 2021]
+rule bustools_umicorrect_gc:
+    input: bus_output_F_Fed/sort.bus, bus_output_F_Fed/matrix.ec, bus_output_F_Fed/transcripts.txt
+    output: bus_output_F_Fed/umicorr.bus
+    log: logs/bustools-umicorr_F_Fed.log
+    jobid: 30
+    wildcards: sample=F_Fed
+    resources: tmpdir=/tmp
+
+bustools umicorrect  -e bus_output_F_Fed/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_F_Fed/transcripts.txt -o bus_output_F_Fed/umicorr.bus bus_output_F_Fed/sort.bus 
+
+[Sun Jul 18 21:34:05 2021]
+rule bustools_umicorrect_gc:
+    input: bus_output_Fasted/sort.bus, bus_output_Fasted/matrix.ec, bus_output_Fasted/transcripts.txt
+    output: bus_output_Fasted/umicorr.bus
+    log: logs/bustools-umicorr_Fasted.log
+    jobid: 22
+    wildcards: sample=Fasted
+    resources: tmpdir=/tmp
+
+bustools umicorrect  -e bus_output_Fasted/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_Fasted/transcripts.txt -o bus_output_Fasted/umicorr.bus bus_output_Fasted/sort.bus 
+
+[Sun Jul 18 21:34:05 2021]
+rule bustools_umicorrect_gc:
+    input: bus_output_Refed/sort.bus, bus_output_Refed/matrix.ec, bus_output_Refed/transcripts.txt
+    output: bus_output_Refed/umicorr.bus
+    log: logs/bustools-umicorr_Refed.log
+    jobid: 24
+    wildcards: sample=Refed
+    resources: tmpdir=/tmp
+
+bustools umicorrect  -e bus_output_Refed/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_Refed/transcripts.txt -o bus_output_Refed/umicorr.bus bus_output_Refed/sort.bus 
+
+[Sun Jul 18 21:34:05 2021]
+rule bustools_umicorrect_gc:
+    input: bus_output_F_Fasted/sort.bus, bus_output_F_Fasted/matrix.ec, bus_output_F_Fasted/transcripts.txt
+    output: bus_output_F_Fasted/umicorr.bus
+    log: logs/bustools-umicorr_F_Fasted.log
+    jobid: 32
+    wildcards: sample=F_Fasted
+    resources: tmpdir=/tmp
+
+bustools umicorrect  -e bus_output_F_Fasted/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_F_Fasted/transcripts.txt -o bus_output_F_Fasted/umicorr.bus bus_output_F_Fasted/sort.bus 
+
+[Sun Jul 18 21:34:05 2021]
+rule bustools_umicorrect_gc:
+    input: bus_output_M_Fed/sort.bus, bus_output_M_Fed/matrix.ec, bus_output_M_Fed/transcripts.txt
+    output: bus_output_M_Fed/umicorr.bus
+    log: logs/bustools-umicorr_M_Fed.log
+    jobid: 26
+    wildcards: sample=M_Fed
+    resources: tmpdir=/tmp
+
+bustools umicorrect  -e bus_output_M_Fed/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_M_Fed/transcripts.txt -o bus_output_M_Fed/umicorr.bus bus_output_M_Fed/sort.bus 
+
+[Sun Jul 18 21:34:05 2021]
+rule bustools_umicorrect_gc:
+    input: bus_output_M_Fasted/sort.bus, bus_output_M_Fasted/matrix.ec, bus_output_M_Fasted/transcripts.txt
+    output: bus_output_M_Fasted/umicorr.bus
+    log: logs/bustools-umicorr_M_Fasted.log
+    jobid: 28
+    wildcards: sample=M_Fasted
+    resources: tmpdir=/tmp
+
+bustools umicorrect  -e bus_output_M_Fasted/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_M_Fasted/transcripts.txt -o bus_output_M_Fasted/umicorr.bus bus_output_M_Fasted/sort.bus 
+Read in 22597677 BUS records
+[Sun Jul 18 21:35:06 2021]
+Finished job 26.
+1 of 45 steps (2%) done
+Select jobs to execute...
+
+[Sun Jul 18 21:35:07 2021]
+rule bustools_downsample_gc:
+    input: bus_output_M_Fed/umicorr.bus, bus_output_M_Fed/matrix.ec, bus_output_M_Fed/transcripts.txt
+    output: count_ds_M_Fed/output.mtx
+    log: logs/bustools-count-ds_M_Fed.log
+    jobid: 60
+    wildcards: sample=M_Fed
+    resources: tmpdir=/tmp
+
+bustools count --downsample 0.1 --hist -m --genecounts -e bus_output_M_Fed/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_M_Fed/transcripts.txt -o count_ds_M_Fed/ bus_output_M_Fed/umicorr.bus 
+
+[Sun Jul 18 21:35:07 2021]
+rule bustools_count_gc:
+    input: bus_output_M_Fed/umicorr.bus, bus_output_M_Fed/matrix.ec, bus_output_M_Fed/transcripts.txt
+    output: count_M_Fed/output.mtx
+    log: logs/bustools-count_M_Fed.log
+    jobid: 41
+    wildcards: sample=M_Fed
+    resources: tmpdir=/tmp
+
+bustools count --hist -m --genecounts -e bus_output_M_Fed/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_M_Fed/transcripts.txt -o count_M_Fed/ bus_output_M_Fed/umicorr.bus 
+Read in 29203340 BUS records
+[Sun Jul 18 21:35:27 2021]
+Finished job 28.
+2 of 45 steps (4%) done
+Select jobs to execute...
+
+[Sun Jul 18 21:35:27 2021]
+rule bustools_downsample_gc:
+    input: bus_output_M_Fasted/umicorr.bus, bus_output_M_Fasted/matrix.ec, bus_output_M_Fasted/transcripts.txt
+    output: count_ds_M_Fasted/output.mtx
+    log: logs/bustools-count-ds_M_Fasted.log
+    jobid: 62
+    wildcards: sample=M_Fasted
+    resources: tmpdir=/tmp
+
+bustools count --downsample 0.1 --hist -m --genecounts -e bus_output_M_Fasted/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_M_Fasted/transcripts.txt -o count_ds_M_Fasted/ bus_output_M_Fasted/umicorr.bus 
+
+[Sun Jul 18 21:35:27 2021]
+rule bustools_count_gc:
+    input: bus_output_M_Fasted/umicorr.bus, bus_output_M_Fasted/matrix.ec, bus_output_M_Fasted/transcripts.txt
+    output: count_M_Fasted/output.mtx
+    log: logs/bustools-count_M_Fasted.log
+    jobid: 42
+    wildcards: sample=M_Fasted
+    resources: tmpdir=/tmp
+
+bustools count --hist -m --genecounts -e bus_output_M_Fasted/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_M_Fasted/transcripts.txt -o count_M_Fasted/ bus_output_M_Fasted/umicorr.bus 
+[Sun Jul 18 21:35:31 2021]
+Finished job 41.
+3 of 45 steps (7%) done
+[Sun Jul 18 21:35:31 2021]
+Finished job 60.
+4 of 45 steps (9%) done
+Select jobs to execute...
+
+[Sun Jul 18 21:35:31 2021]
+rule bustools_predict_gc:
+    input: count_ds_M_Fed/output.mtx
+    output: count_ds_pred_M_Fed/output.mtx
+    log: logs/bustools-predict_M_Fed.log
+    jobid: 59
+    wildcards: sample=M_Fed
+    resources: tmpdir=/tmp
+
+bustools predict -t 10 -o count_ds_pred_M_Fed/ count_ds_M_Fed/ 2>logs/bustools-predict_M_Fed.log
+Read in 30748198 BUS records
+[Sun Jul 18 21:35:34 2021]
+Finished job 32.
+5 of 45 steps (11%) done
+Select jobs to execute...
+
+[Sun Jul 18 21:35:34 2021]
+rule bustools_downsample_gc:
+    input: bus_output_F_Fasted/umicorr.bus, bus_output_F_Fasted/matrix.ec, bus_output_F_Fasted/transcripts.txt
+    output: count_ds_F_Fasted/output.mtx
+    log: logs/bustools-count-ds_F_Fasted.log
+    jobid: 66
+    wildcards: sample=F_Fasted
+    resources: tmpdir=/tmp
+
+bustools count --downsample 0.1 --hist -m --genecounts -e bus_output_F_Fasted/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_F_Fasted/transcripts.txt -o count_ds_F_Fasted/ bus_output_F_Fasted/umicorr.bus 
+
+[Sun Jul 18 21:35:34 2021]
+rule bustools_count_gc:
+    input: bus_output_F_Fasted/umicorr.bus, bus_output_F_Fasted/matrix.ec, bus_output_F_Fasted/transcripts.txt
+    output: count_F_Fasted/output.mtx
+    log: logs/bustools-count_F_Fasted.log
+    jobid: 44
+    wildcards: sample=F_Fasted
+    resources: tmpdir=/tmp
+
+bustools count --hist -m --genecounts -e bus_output_F_Fasted/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_F_Fasted/transcripts.txt -o count_F_Fasted/ bus_output_F_Fasted/umicorr.bus 
+[Sun Jul 18 21:35:35 2021]
+Finished job 59.
+6 of 45 steps (13%) done
+[Sun Jul 18 21:35:55 2021]
+Finished job 42.
+7 of 45 steps (16%) done
+[Sun Jul 18 21:35:55 2021]
+Finished job 62.
+8 of 45 steps (18%) done
+Select jobs to execute...
+
+[Sun Jul 18 21:35:55 2021]
+rule bustools_predict_gc:
+    input: count_ds_M_Fasted/output.mtx
+    output: count_ds_pred_M_Fasted/output.mtx
+    log: logs/bustools-predict_M_Fasted.log
+    jobid: 61
+    wildcards: sample=M_Fasted
+    resources: tmpdir=/tmp
+
+bustools predict -t 10 -o count_ds_pred_M_Fasted/ count_ds_M_Fasted/ 2>logs/bustools-predict_M_Fasted.log
+[Sun Jul 18 21:36:01 2021]
+Finished job 61.
+9 of 45 steps (20%) done
+[Sun Jul 18 21:36:05 2021]
+Finished job 66.
+10 of 45 steps (22%) done
+[Sun Jul 18 21:36:05 2021]
+Finished job 44.
+11 of 45 steps (24%) done
+Select jobs to execute...
+
+[Sun Jul 18 21:36:05 2021]
+rule bustools_predict_gc:
+    input: count_ds_F_Fasted/output.mtx
+    output: count_ds_pred_F_Fasted/output.mtx
+    log: logs/bustools-predict_F_Fasted.log
+    jobid: 65
+    wildcards: sample=F_Fasted
+    resources: tmpdir=/tmp
+
+bustools predict -t 10 -o count_ds_pred_F_Fasted/ count_ds_F_Fasted/ 2>logs/bustools-predict_F_Fasted.log
+[Sun Jul 18 21:36:09 2021]
+Finished job 65.
+12 of 45 steps (27%) done
+Read in 40732534 BUS records
+[Sun Jul 18 21:36:11 2021]
+Finished job 30.
+13 of 45 steps (29%) done
+Select jobs to execute...
+
+[Sun Jul 18 21:36:11 2021]
+rule bustools_downsample_gc:
+    input: bus_output_F_Fed/umicorr.bus, bus_output_F_Fed/matrix.ec, bus_output_F_Fed/transcripts.txt
+    output: count_ds_F_Fed/output.mtx
+    log: logs/bustools-count-ds_F_Fed.log
+    jobid: 64
+    wildcards: sample=F_Fed
+    resources: tmpdir=/tmp
+
+bustools count --downsample 0.1 --hist -m --genecounts -e bus_output_F_Fed/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_F_Fed/transcripts.txt -o count_ds_F_Fed/ bus_output_F_Fed/umicorr.bus 
+
+[Sun Jul 18 21:36:11 2021]
+rule bustools_count_gc:
+    input: bus_output_F_Fed/umicorr.bus, bus_output_F_Fed/matrix.ec, bus_output_F_Fed/transcripts.txt
+    output: count_F_Fed/output.mtx
+    log: logs/bustools-count_F_Fed.log
+    jobid: 43
+    wildcards: sample=F_Fed
+    resources: tmpdir=/tmp
+
+bustools count --hist -m --genecounts -e bus_output_F_Fed/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_F_Fed/transcripts.txt -o count_F_Fed/ bus_output_F_Fed/umicorr.bus 
+Read in 36832534 BUS records
+[Sun Jul 18 21:36:11 2021]
+Finished job 14.
+14 of 45 steps (31%) done
+Select jobs to execute...
+
+[Sun Jul 18 21:36:12 2021]
+rule bustools_count_gc:
+    input: bus_output_Arc2/umicorr.bus, bus_output_Arc2/matrix.ec, bus_output_Arc2/transcripts.txt
+    output: count_Arc2/output.mtx
+    log: logs/bustools-count_Arc2.log
+    jobid: 35
+    wildcards: sample=Arc2
+    resources: tmpdir=/tmp
+
+bustools count --hist -m --genecounts -e bus_output_Arc2/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_Arc2/transcripts.txt -o count_Arc2/ bus_output_Arc2/umicorr.bus 
+
+[Sun Jul 18 21:36:12 2021]
+rule bustools_downsample_gc:
+    input: bus_output_Arc2/umicorr.bus, bus_output_Arc2/matrix.ec, bus_output_Arc2/transcripts.txt
+    output: count_ds_Arc2/output.mtx
+    log: logs/bustools-count-ds_Arc2.log
+    jobid: 48
+    wildcards: sample=Arc2
+    resources: tmpdir=/tmp
+
+bustools count --downsample 0.1 --hist -m --genecounts -e bus_output_Arc2/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_Arc2/transcripts.txt -o count_ds_Arc2/ bus_output_Arc2/umicorr.bus 
+Read in 37121045 BUS records
+[Sun Jul 18 21:36:27 2021]
+Finished job 16.
+15 of 45 steps (33%) done
+Select jobs to execute...
+
+[Sun Jul 18 21:36:27 2021]
+rule bustools_count_gc:
+    input: bus_output_Arc3/umicorr.bus, bus_output_Arc3/matrix.ec, bus_output_Arc3/transcripts.txt
+    output: count_Arc3/output.mtx
+    log: logs/bustools-count_Arc3.log
+    jobid: 36
+    wildcards: sample=Arc3
+    resources: tmpdir=/tmp
+
+bustools count --hist -m --genecounts -e bus_output_Arc3/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_Arc3/transcripts.txt -o count_Arc3/ bus_output_Arc3/umicorr.bus 
+
+[Sun Jul 18 21:36:27 2021]
+rule bustools_downsample_gc:
+    input: bus_output_Arc3/umicorr.bus, bus_output_Arc3/matrix.ec, bus_output_Arc3/transcripts.txt
+    output: count_ds_Arc3/output.mtx
+    log: logs/bustools-count-ds_Arc3.log
+    jobid: 50
+    wildcards: sample=Arc3
+    resources: tmpdir=/tmp
+
+bustools count --downsample 0.1 --hist -m --genecounts -e bus_output_Arc3/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_Arc3/transcripts.txt -o count_ds_Arc3/ bus_output_Arc3/umicorr.bus 
+[Sun Jul 18 21:36:28 2021]
+Finished job 48.
+16 of 45 steps (36%) done
+Select jobs to execute...
+[Sun Jul 18 21:36:28 2021]
+Finished job 35.
+17 of 45 steps (38%) done
+
+[Sun Jul 18 21:36:28 2021]
+rule bustools_predict_gc:
+    input: count_ds_Arc2/output.mtx
+    output: count_ds_pred_Arc2/output.mtx
+    log: logs/bustools-predict_Arc2.log
+    jobid: 47
+    wildcards: sample=Arc2
+    resources: tmpdir=/tmp
+
+bustools predict -t 10 -o count_ds_pred_Arc2/ count_ds_Arc2/ 2>logs/bustools-predict_Arc2.log
+[Sun Jul 18 21:36:30 2021]
+Finished job 47.
+18 of 45 steps (40%) done
+[Sun Jul 18 21:36:40 2021]
+Finished job 43.
+19 of 45 steps (42%) done
+[Sun Jul 18 21:36:40 2021]
+Finished job 64.
+20 of 45 steps (44%) done
+Select jobs to execute...
+
+[Sun Jul 18 21:36:40 2021]
+rule bustools_predict_gc:
+    input: count_ds_F_Fed/output.mtx
+    output: count_ds_pred_F_Fed/output.mtx
+    log: logs/bustools-predict_F_Fed.log
+    jobid: 63
+    wildcards: sample=F_Fed
+    resources: tmpdir=/tmp
+
+bustools predict -t 10 -o count_ds_pred_F_Fed/ count_ds_F_Fed/ 2>logs/bustools-predict_F_Fed.log
+[Sun Jul 18 21:36:42 2021]
+Finished job 50.
+21 of 45 steps (47%) done
+Select jobs to execute...
+[Sun Jul 18 21:36:42 2021]
+Finished job 36.
+22 of 45 steps (49%) done
+
+[Sun Jul 18 21:36:42 2021]
+rule bustools_predict_gc:
+    input: count_ds_Arc3/output.mtx
+    output: count_ds_pred_Arc3/output.mtx
+    log: logs/bustools-predict_Arc3.log
+    jobid: 49
+    wildcards: sample=Arc3
+    resources: tmpdir=/tmp
+
+bustools predict -t 10 -o count_ds_pred_Arc3/ count_ds_Arc3/ 2>logs/bustools-predict_Arc3.log
+[Sun Jul 18 21:36:43 2021]
+Finished job 49.
+23 of 45 steps (51%) done
+[Sun Jul 18 21:36:44 2021]
+Finished job 63.
+24 of 45 steps (53%) done
+Read in 43336666 BUS records
+[Sun Jul 18 21:37:15 2021]
+Finished job 18.
+25 of 45 steps (56%) done
+Select jobs to execute...
+
+[Sun Jul 18 21:37:16 2021]
+rule bustools_downsample_gc:
+    input: bus_output_Chow10/umicorr.bus, bus_output_Chow10/matrix.ec, bus_output_Chow10/transcripts.txt
+    output: count_ds_Chow10/output.mtx
+    log: logs/bustools-count-ds_Chow10.log
+    jobid: 52
+    wildcards: sample=Chow10
+    resources: tmpdir=/tmp
+
+bustools count --downsample 0.1 --hist -m --genecounts -e bus_output_Chow10/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_Chow10/transcripts.txt -o count_ds_Chow10/ bus_output_Chow10/umicorr.bus 
+
+[Sun Jul 18 21:37:16 2021]
+rule bustools_count_gc:
+    input: bus_output_Chow10/umicorr.bus, bus_output_Chow10/matrix.ec, bus_output_Chow10/transcripts.txt
+    output: count_Chow10/output.mtx
+    log: logs/bustools-count_Chow10.log
+    jobid: 37
+    wildcards: sample=Chow10
+    resources: tmpdir=/tmp
+
+bustools count --hist -m --genecounts -e bus_output_Chow10/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_Chow10/transcripts.txt -o count_Chow10/ bus_output_Chow10/umicorr.bus 
+[Sun Jul 18 21:37:27 2021]
+Finished job 37.
+26 of 45 steps (58%) done
+[Sun Jul 18 21:37:27 2021]
+Finished job 52.
+27 of 45 steps (60%) done
+Select jobs to execute...
+
+[Sun Jul 18 21:37:27 2021]
+rule bustools_predict_gc:
+    input: count_ds_Chow10/output.mtx
+    output: count_ds_pred_Chow10/output.mtx
+    log: logs/bustools-predict_Chow10.log
+    jobid: 51
+    wildcards: sample=Chow10
+    resources: tmpdir=/tmp
+
+bustools predict -t 10 -o count_ds_pred_Chow10/ count_ds_Chow10/ 2>logs/bustools-predict_Chow10.log
+[Sun Jul 18 21:37:28 2021]
+Finished job 51.
+28 of 45 steps (62%) done
+Read in 65805887 BUS records
+[Sun Jul 18 21:37:31 2021]
+Finished job 12.
+29 of 45 steps (64%) done
+Select jobs to execute...
+
+[Sun Jul 18 21:37:31 2021]
+rule bustools_count_gc:
+    input: bus_output_Arc1/umicorr.bus, bus_output_Arc1/matrix.ec, bus_output_Arc1/transcripts.txt
+    output: count_Arc1/output.mtx
+    log: logs/bustools-count_Arc1.log
+    jobid: 34
+    wildcards: sample=Arc1
+    resources: tmpdir=/tmp
+
+bustools count --hist -m --genecounts -e bus_output_Arc1/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_Arc1/transcripts.txt -o count_Arc1/ bus_output_Arc1/umicorr.bus 
+
+[Sun Jul 18 21:37:31 2021]
+rule bustools_downsample_gc:
+    input: bus_output_Arc1/umicorr.bus, bus_output_Arc1/matrix.ec, bus_output_Arc1/transcripts.txt
+    output: count_ds_Arc1/output.mtx
+    log: logs/bustools-count-ds_Arc1.log
+    jobid: 46
+    wildcards: sample=Arc1
+    resources: tmpdir=/tmp
+
+bustools count --downsample 0.1 --hist -m --genecounts -e bus_output_Arc1/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_Arc1/transcripts.txt -o count_ds_Arc1/ bus_output_Arc1/umicorr.bus 
+Read in 50702715 BUS records
+[Sun Jul 18 21:37:45 2021]
+Finished job 20.
+30 of 45 steps (67%) done
+Select jobs to execute...
+
+[Sun Jul 18 21:37:45 2021]
+rule bustools_count_gc:
+    input: bus_output_HFD/umicorr.bus, bus_output_HFD/matrix.ec, bus_output_HFD/transcripts.txt
+    output: count_HFD/output.mtx
+    log: logs/bustools-count_HFD.log
+    jobid: 38
+    wildcards: sample=HFD
+    resources: tmpdir=/tmp
+
+bustools count --hist -m --genecounts -e bus_output_HFD/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_HFD/transcripts.txt -o count_HFD/ bus_output_HFD/umicorr.bus 
+
+[Sun Jul 18 21:37:45 2021]
+rule bustools_downsample_gc:
+    input: bus_output_HFD/umicorr.bus, bus_output_HFD/matrix.ec, bus_output_HFD/transcripts.txt
+    output: count_ds_HFD/output.mtx
+    log: logs/bustools-count-ds_HFD.log
+    jobid: 54
+    wildcards: sample=HFD
+    resources: tmpdir=/tmp
+
+bustools count --downsample 0.1 --hist -m --genecounts -e bus_output_HFD/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_HFD/transcripts.txt -o count_ds_HFD/ bus_output_HFD/umicorr.bus 
+[Sun Jul 18 21:37:55 2021]
+Finished job 46.
+31 of 45 steps (69%) done
+Select jobs to execute...
+
+[Sun Jul 18 21:37:55 2021]
+rule bustools_predict_gc:
+    input: count_ds_Arc1/output.mtx
+    output: count_ds_pred_Arc1/output.mtx
+    log: logs/bustools-predict_Arc1.log
+    jobid: 45
+    wildcards: sample=Arc1
+    resources: tmpdir=/tmp
+
+bustools predict -t 10 -o count_ds_pred_Arc1/ count_ds_Arc1/ 2>logs/bustools-predict_Arc1.log
+[Sun Jul 18 21:37:55 2021]
+Finished job 34.
+32 of 45 steps (71%) done
+[Sun Jul 18 21:37:57 2021]
+Finished job 45.
+33 of 45 steps (73%) done
+[Sun Jul 18 21:37:58 2021]
+Finished job 38.
+34 of 45 steps (76%) done
+[Sun Jul 18 21:37:58 2021]
+Finished job 54.
+35 of 45 steps (78%) done
+Select jobs to execute...
+
+[Sun Jul 18 21:37:58 2021]
+rule bustools_predict_gc:
+    input: count_ds_HFD/output.mtx
+    output: count_ds_pred_HFD/output.mtx
+    log: logs/bustools-predict_HFD.log
+    jobid: 53
+    wildcards: sample=HFD
+    resources: tmpdir=/tmp
+
+bustools predict -t 10 -o count_ds_pred_HFD/ count_ds_HFD/ 2>logs/bustools-predict_HFD.log
+[Sun Jul 18 21:37:59 2021]
+Finished job 53.
+36 of 45 steps (80%) done
+Read in 132708161 BUS records
+[Sun Jul 18 21:38:55 2021]
+Finished job 22.
+37 of 45 steps (82%) done
+Select jobs to execute...
+
+[Sun Jul 18 21:38:55 2021]
+rule bustools_count_gc:
+    input: bus_output_Fasted/umicorr.bus, bus_output_Fasted/matrix.ec, bus_output_Fasted/transcripts.txt
+    output: count_Fasted/output.mtx
+    log: logs/bustools-count_Fasted.log
+    jobid: 39
+    wildcards: sample=Fasted
+    resources: tmpdir=/tmp
+
+bustools count --hist -m --genecounts -e bus_output_Fasted/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_Fasted/transcripts.txt -o count_Fasted/ bus_output_Fasted/umicorr.bus 
+
+[Sun Jul 18 21:38:55 2021]
+rule bustools_downsample_gc:
+    input: bus_output_Fasted/umicorr.bus, bus_output_Fasted/matrix.ec, bus_output_Fasted/transcripts.txt
+    output: count_ds_Fasted/output.mtx
+    log: logs/bustools-count-ds_Fasted.log
+    jobid: 56
+    wildcards: sample=Fasted
+    resources: tmpdir=/tmp
+
+bustools count --downsample 0.1 --hist -m --genecounts -e bus_output_Fasted/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_Fasted/transcripts.txt -o count_ds_Fasted/ bus_output_Fasted/umicorr.bus 
+Read in 143919039 BUS records
+[Sun Jul 18 21:39:10 2021]
+Finished job 24.
+38 of 45 steps (84%) done
+Select jobs to execute...
+
+[Sun Jul 18 21:39:10 2021]
+rule bustools_downsample_gc:
+    input: bus_output_Refed/umicorr.bus, bus_output_Refed/matrix.ec, bus_output_Refed/transcripts.txt
+    output: count_ds_Refed/output.mtx
+    log: logs/bustools-count-ds_Refed.log
+    jobid: 58
+    wildcards: sample=Refed
+    resources: tmpdir=/tmp
+
+bustools count --downsample 0.1 --hist -m --genecounts -e bus_output_Refed/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_Refed/transcripts.txt -o count_ds_Refed/ bus_output_Refed/umicorr.bus 
+
+[Sun Jul 18 21:39:10 2021]
+rule bustools_count_gc:
+    input: bus_output_Refed/umicorr.bus, bus_output_Refed/matrix.ec, bus_output_Refed/transcripts.txt
+    output: count_Refed/output.mtx
+    log: logs/bustools-count_Refed.log
+    jobid: 40
+    wildcards: sample=Refed
+    resources: tmpdir=/tmp
+
+bustools count --hist -m --genecounts -e bus_output_Refed/matrix.ec -g /mnt/pub/GENCODE/M27/tx2gene/transcripts_to_genes_p.txt -t bus_output_Refed/transcripts.txt -o count_Refed/ bus_output_Refed/umicorr.bus 
+[Sun Jul 18 21:39:43 2021]
+Finished job 56.
+39 of 45 steps (87%) done
+Select jobs to execute...
+
+[Sun Jul 18 21:39:43 2021]
+rule bustools_predict_gc:
+    input: count_ds_Fasted/output.mtx
+    output: count_ds_pred_Fasted/output.mtx
+    log: logs/bustools-predict_Fasted.log
+    jobid: 55
+    wildcards: sample=Fasted
+    resources: tmpdir=/tmp
+
+bustools predict -t 10 -o count_ds_pred_Fasted/ count_ds_Fasted/ 2>logs/bustools-predict_Fasted.log
+[Sun Jul 18 21:39:43 2021]
+Finished job 39.
+40 of 45 steps (89%) done
+[Sun Jul 18 21:39:47 2021]
+Finished job 55.
+41 of 45 steps (91%) done
+[Sun Jul 18 21:39:59 2021]
+Finished job 58.
+42 of 45 steps (93%) done
+[Sun Jul 18 21:39:59 2021]
+Finished job 40.
+43 of 45 steps (96%) done
+Select jobs to execute...
+
+[Sun Jul 18 21:39:59 2021]
+rule bustools_predict_gc:
+    input: count_ds_Refed/output.mtx
+    output: count_ds_pred_Refed/output.mtx
+    log: logs/bustools-predict_Refed.log
+    jobid: 57
+    wildcards: sample=Refed
+    resources: tmpdir=/tmp
+
+bustools predict -t 10 -o count_ds_pred_Refed/ count_ds_Refed/ 2>logs/bustools-predict_Refed.log
+[Sun Jul 18 21:40:02 2021]
+Finished job 57.
+44 of 45 steps (98%) done
+Select jobs to execute...
+
+[Sun Jul 18 21:40:02 2021]
+localrule all:
+    input: bus_output_Arc1/output.bus, bus_output_Arc2/output.bus, bus_output_Arc3/output.bus, bus_output_Chow10/output.bus, bus_output_HFD/output.bus, bus_output_Fasted/output.bus, bus_output_Refed/output.bus, bus_output_M_Fed/output.bus, bus_output_M_Fasted/output.bus, bus_output_F_Fed/output.bus, bus_output_F_Fasted/output.bus, bus_output_Arc1/umicorr.bus, bus_output_Arc2/umicorr.bus, bus_output_Arc3/umicorr.bus, bus_output_Chow10/umicorr.bus, bus_output_HFD/umicorr.bus, bus_output_Fasted/umicorr.bus, bus_output_Refed/umicorr.bus, bus_output_M_Fed/umicorr.bus, bus_output_M_Fasted/umicorr.bus, bus_output_F_Fed/umicorr.bus, bus_output_F_Fasted/umicorr.bus, count_Arc1/output.mtx, count_Arc2/output.mtx, count_Arc3/output.mtx, count_Chow10/output.mtx, count_HFD/output.mtx, count_Fasted/output.mtx, count_Refed/output.mtx, count_M_Fed/output.mtx, count_M_Fasted/output.mtx, count_F_Fed/output.mtx, count_F_Fasted/output.mtx, count_ds_pred_Arc1/output.mtx, count_ds_pred_Arc2/output.mtx, count_ds_pred_Arc3/output.mtx, count_ds_pred_Chow10/output.mtx, count_ds_pred_HFD/output.mtx, count_ds_pred_Fasted/output.mtx, count_ds_pred_Refed/output.mtx, count_ds_pred_M_Fed/output.mtx, count_ds_pred_M_Fasted/output.mtx, count_ds_pred_F_Fed/output.mtx, count_ds_pred_F_Fasted/output.mtx
+    jobid: 0
+    resources: tmpdir=/tmp
+
+[Sun Jul 18 21:40:02 2021]
+Finished job 0.
+45 of 45 steps (100%) done
+Complete log: /mnt/data/PRJNA360829/.snakemake/log/2021-07-18T213404.486202.snakemake.log
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 40
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job                       count    min threads    max threads
+----------------------  -------  -------------  -------------
+all                           1              1              1
+bustools_count_gc            11              1              1
+bustools_downsample_gc       11              1              1
+bustools_predict_gc          11              1              1
+bustools_sort_gc             11              4              4
+bustools_umicorrect_gc       11              1              1
+kallisto_gc                  11             10             10
+total                        67              1             10
+
+Select jobs to execute...
+
+[Sun Jul 18 22:05:21 2021]
+rule kallisto_gc:
+    input: fastq_gz/Arc1_R1.fastq.gz, fastq_gz/Arc1_R2.fastq.gz
+    output: bus_output_Arc1/output.bus, bus_output_Arc1/matrix.ec, bus_output_Arc1/transcripts.txt
+    log: logs/kallisto-bus_Arc1.log
+    jobid: 1
+    wildcards: sample=Arc1
+    threads: 10
+    resources: tmpdir=/tmp
+
+kallisto bus             -i /mnt/pub/GENCODE/M27/transcriptome.idx             -o bus_output_Arc1             -x 10xv2             -t 10             fastq_gz/Arc1_R1.fastq.gz fastq_gz/Arc1_R2.fastq.gz
+
+[Sun Jul 18 22:05:21 2021]
+rule kallisto_gc:
+    input: fastq_gz/Arc3_R1.fastq.gz, fastq_gz/Arc3_R2.fastq.gz
+    output: bus_output_Arc3/output.bus, bus_output_Arc3/matrix.ec, bus_output_Arc3/transcripts.txt
+    log: logs/kallisto-bus_Arc3.log
+    jobid: 3
+    wildcards: sample=Arc3
+    threads: 10
+    resources: tmpdir=/tmp
+
+kallisto bus             -i /mnt/pub/GENCODE/M27/transcriptome.idx             -o bus_output_Arc3             -x 10xv2             -t 10             fastq_gz/Arc3_R1.fastq.gz fastq_gz/Arc3_R2.fastq.gz
+
+
+[Sun Jul 18 22:05:21 2021]
+rule kallisto_gc:
+    input: fastq_gz/Fasted_R1.fastq.gz, fastq_gz/Fasted_R2.fastq.gz
+    output: bus_output_Fasted/output.bus, bus_output_Fasted/matrix.ec, bus_output_Fasted/transcripts.txt
+    log: logs/kallisto-bus_Fasted.log
+    jobid: 6
+    wildcards: sample=Fasted
+    threads: 10
+    resources: tmpdir=/tmp
+
+kallisto bus             -i /mnt/pub/GENCODE/M27/transcriptome.idx             -o bus_output_Fasted             -x 10xv2             -t 10             fastq_gz/Fasted_R1.fastq.gz fastq_gz/Fasted_R2.fastq.gz
+[index] k-mer length: 31
+[index] number of targets: 142,375
+[index] number of k-mers: 120,679,684
+
+
+[Sun Jul 18 22:05:21 2021]
+rule kallisto_gc:
+    input: fastq_gz/F_Fasted_R1.fastq.gz, fastq_gz/F_Fasted_R2.fastq.gz
+    output: bus_output_F_Fasted/output.bus, bus_output_F_Fasted/matrix.ec, bus_output_F_Fasted/transcripts.txt
+    log: logs/kallisto-bus_F_Fasted.log
+    jobid: 11
+    wildcards: sample=F_Fasted
+    threads: 10
+    resources: tmpdir=/tmp
+
+kallisto bus             -i /mnt/pub/GENCODE/M27/transcriptome.idx             -o bus_output_F_Fasted             -x 10xv2             -t 10             fastq_gz/F_Fasted_R1.fastq.gz fastq_gz/F_Fasted_R2.fastq.gz
+[index] k-mer length: 31
+[index] number of targets: 142,375
+[index] number of k-mers: 120,679,684
+
+[index] k-mer length: 31
+[index] number of targets: 142,375
+[index] number of k-mers: 120,679,684
+
+[index] k-mer length: 31
+[index] number of targets: 142,375
+[index] number of k-mers: 120,679,684
+[index] number of equivalence classes: [index] number of equivalence classes: [index] number of equivalence classes: [index] number of equivalence classes: 511,876511,876
+511,876
+511,876
+
+[quant] will process sample [quant] will process sample [quant] will process sample [quant] will process sample 1: 1: 1: 1: fastq_gz/Arc1_R1.fastq.gz
+fastq_gz/Arc3_R1.fastq.gzfastq_gz/F_Fasted_R1.fastq.gz
+fastq_gz/Fasted_R1.fastq.gz
+                               fastq_gz/Arc1_R2.fastq.gz
+                                                              fastq_gz/F_Fasted_R2.fastq.gz                               fastq_gz/Fasted_R2.fastq.gz
+[quant] finding pseudoalignments for the reads ...fastq_gz/Arc3_R2.fastq.gz
+
+[quant] finding pseudoalignments for the reads ...
+[quant] finding pseudoalignments for the reads ...[quant] finding pseudoalignments for the reads ... done
+[quant] processed 141,120,243 reads, 0 reads pseudoaligned
+[~warn] no reads pseudoaligned.
+
+[Sun Jul 18 22:11:26 2021]
+Error in rule kallisto_gc:
+    jobid: 11
+    output: bus_output_F_Fasted/output.bus, bus_output_F_Fasted/matrix.ec, bus_output_F_Fasted/transcripts.txt
+    log: logs/kallisto-bus_F_Fasted.log (check log file(s) for error message)
+    shell:
+        kallisto bus             -i /mnt/pub/GENCODE/M27/transcriptome.idx             -o bus_output_F_Fasted             -x 10xv2             -t 10             fastq_gz/F_Fasted_R1.fastq.gz fastq_gz/F_Fasted_R2.fastq.gz
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job kallisto_gc since they might be corrupted:
+bus_output_F_Fasted/output.bus, bus_output_F_Fasted/matrix.ec, bus_output_F_Fasted/transcripts.txt
+ done
+[quant] processed 160,756,961 reads, 0 reads pseudoaligned
+[~warn] no reads pseudoaligned.
+
+[Sun Jul 18 22:11:47 2021]
+Error in rule kallisto_gc:
+    jobid: 3
+    output: bus_output_Arc3/output.bus, bus_output_Arc3/matrix.ec, bus_output_Arc3/transcripts.txt
+    log: logs/kallisto-bus_Arc3.log (check log file(s) for error message)
+    shell:
+        kallisto bus             -i /mnt/pub/GENCODE/M27/transcriptome.idx             -o bus_output_Arc3             -x 10xv2             -t 10             fastq_gz/Arc3_R1.fastq.gz fastq_gz/Arc3_R2.fastq.gz
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job kallisto_gc since they might be corrupted:
+bus_output_Arc3/output.bus, bus_output_Arc3/matrix.ec, bus_output_Arc3/transcripts.txt
+ done
+[quant] processed 467,539,027 reads, 0 reads pseudoaligned
+[~warn] no reads pseudoaligned.
+
+[Sun Jul 18 22:23:16 2021]
+Error in rule kallisto_gc:
+    jobid: 6
+    output: bus_output_Fasted/output.bus, bus_output_Fasted/matrix.ec, bus_output_Fasted/transcripts.txt
+    log: logs/kallisto-bus_Fasted.log (check log file(s) for error message)
+    shell:
+        kallisto bus             -i /mnt/pub/GENCODE/M27/transcriptome.idx             -o bus_output_Fasted             -x 10xv2             -t 10             fastq_gz/Fasted_R1.fastq.gz fastq_gz/Fasted_R2.fastq.gz
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job kallisto_gc since they might be corrupted:
+bus_output_Fasted/output.bus, bus_output_Fasted/matrix.ec, bus_output_Fasted/transcripts.txt
+ done
+[quant] processed 482,689,315 reads, 0 reads pseudoaligned
+[~warn] no reads pseudoaligned.
+
+[Sun Jul 18 22:23:39 2021]
+Error in rule kallisto_gc:
+    jobid: 1
+    output: bus_output_Arc1/output.bus, bus_output_Arc1/matrix.ec, bus_output_Arc1/transcripts.txt
+    log: logs/kallisto-bus_Arc1.log (check log file(s) for error message)
+    shell:
+        kallisto bus             -i /mnt/pub/GENCODE/M27/transcriptome.idx             -o bus_output_Arc1             -x 10xv2             -t 10             fastq_gz/Arc1_R1.fastq.gz fastq_gz/Arc1_R2.fastq.gz
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job kallisto_gc since they might be corrupted:
+bus_output_Arc1/output.bus, bus_output_Arc1/matrix.ec, bus_output_Arc1/transcripts.txt
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /mnt/data/PRJNA360829/.snakemake/log/2021-07-18T220520.294623.snakemake.log
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 40
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job      count    min threads    max threads
+-----  -------  -------------  -------------
+all          1              1              1
+kb_gc       11             10             10
+total       12              1             10
+
+Select jobs to execute...
+
+[Mon Jul 19 10:04:14 2021]
+rule kb_gc:
+    input: fastq_gz/Arc3_R1.fastq.gz, fastq_gz/Arc3_R2.fastq.gz
+    output: kb_Arc3/counts_filtered/adata.h5ad
+    log: logs/kallisto-bus_Arc3.log
+    jobid: 3
+    wildcards: sample=Arc3
+    threads: 10
+    resources: tmpdir=/tmp
+
+kb count             -i /mnt/pub/GENCODE/M27/transcriptome.idx             -g /mnt/pub/GENCODE/M27/transcripts_to_genes.txt             -o kb_Arc3             -x DROPSEQ             -t 10             --h5ad             --filter bustools             fastq_gz/Arc3_R1.fastq.gz fastq_gz/Arc3_R2.fastq.gz
+
+[Mon Jul 19 10:04:14 2021]
+rule kb_gc:
+    input: fastq_gz/Arc1_R1.fastq.gz, fastq_gz/Arc1_R2.fastq.gz
+    output: kb_Arc1/counts_filtered/adata.h5ad
+    log: logs/kallisto-bus_Arc1.log
+    jobid: 1
+    wildcards: sample=Arc1
+    threads: 10
+    resources: tmpdir=/tmp
+
+kb count             -i /mnt/pub/GENCODE/M27/transcriptome.idx             -g /mnt/pub/GENCODE/M27/transcripts_to_genes.txt             -o kb_Arc1             -x DROPSEQ             -t 10             --h5ad             --filter bustools             fastq_gz/Arc1_R1.fastq.gz fastq_gz/Arc1_R2.fastq.gz
+
+[Mon Jul 19 10:04:14 2021]
+rule kb_gc:
+    input: fastq_gz/Fasted_R1.fastq.gz, fastq_gz/Fasted_R2.fastq.gz
+    output: kb_Fasted/counts_filtered/adata.h5ad
+    log: logs/kallisto-bus_Fasted.log
+    jobid: 6
+    wildcards: sample=Fasted
+    threads: 10
+    resources: tmpdir=/tmp
+
+kb count             -i /mnt/pub/GENCODE/M27/transcriptome.idx             -g /mnt/pub/GENCODE/M27/transcripts_to_genes.txt             -o kb_Fasted             -x DROPSEQ             -t 10             --h5ad             --filter bustools             fastq_gz/Fasted_R1.fastq.gz fastq_gz/Fasted_R2.fastq.gz
+
+[Mon Jul 19 10:04:14 2021]
+rule kb_gc:
+    input: fastq_gz/F_Fasted_R1.fastq.gz, fastq_gz/F_Fasted_R2.fastq.gz
+    output: kb_F_Fasted/counts_filtered/adata.h5ad
+    log: logs/kallisto-bus_F_Fasted.log
+    jobid: 11
+    wildcards: sample=F_Fasted
+    threads: 10
+    resources: tmpdir=/tmp
+
+kb count             -i /mnt/pub/GENCODE/M27/transcriptome.idx             -g /mnt/pub/GENCODE/M27/transcripts_to_genes.txt             -o kb_F_Fasted             -x DROPSEQ             -t 10             --h5ad             --filter bustools             fastq_gz/F_Fasted_R1.fastq.gz fastq_gz/F_Fasted_R2.fastq.gz
+[2021-07-19 10:04:16,070]    INFO [count] Using index /mnt/pub/GENCODE/M27/transcriptome.idx to generate BUS file to kb_Arc1 from
+[2021-07-19 10:04:16,070]    INFO [count] Using index /mnt/pub/GENCODE/M27/transcriptome.idx to generate BUS file to kb_F_Fasted from
+[2021-07-19 10:04:16,070]    INFO [count]         fastq_gz/Arc1_R1.fastq.gz
+[2021-07-19 10:04:16,070]    INFO [count]         fastq_gz/F_Fasted_R1.fastq.gz
+[2021-07-19 10:04:16,070]    INFO [count]         fastq_gz/Arc1_R2.fastq.gz
+[2021-07-19 10:04:16,070]    INFO [count] Using index /mnt/pub/GENCODE/M27/transcriptome.idx to generate BUS file to kb_Fasted from
+[2021-07-19 10:04:16,070]    INFO [count]         fastq_gz/F_Fasted_R2.fastq.gz
+[2021-07-19 10:04:16,070]    INFO [count]         fastq_gz/Fasted_R1.fastq.gz
+[2021-07-19 10:04:16,071]    INFO [count]         fastq_gz/Fasted_R2.fastq.gz
+[2021-07-19 10:04:16,077]    INFO [count] Using index /mnt/pub/GENCODE/M27/transcriptome.idx to generate BUS file to kb_Arc3 from
+[2021-07-19 10:04:16,077]    INFO [count]         fastq_gz/Arc3_R1.fastq.gz
+[2021-07-19 10:04:16,078]    INFO [count]         fastq_gz/Arc3_R2.fastq.gz
+[2021-07-19 10:12:22,430]    INFO [count] Sorting BUS file kb_F_Fasted/output.bus to kb_F_Fasted/tmp/output.s.bus
+[2021-07-19 10:12:44,830]    INFO [count] Sorting BUS file kb_Arc3/output.bus to kb_Arc3/tmp/output.s.bus
+[2021-07-19 10:13:41,223]    INFO [count] Whitelist not provided
+[2021-07-19 10:13:41,224]    INFO [count] Generating whitelist kb_F_Fasted/whitelist.txt from BUS file kb_F_Fasted/tmp/output.s.bus
+[2021-07-19 10:13:41,837]    INFO [count] Inspecting BUS file kb_F_Fasted/tmp/output.s.bus
+[2021-07-19 10:13:53,711]    INFO [count] Correcting BUS records in kb_F_Fasted/tmp/output.s.bus to kb_F_Fasted/tmp/output.s.c.bus with whitelist kb_F_Fasted/whitelist.txt
+[2021-07-19 10:14:22,014]    INFO [count] Sorting BUS file kb_F_Fasted/tmp/output.s.c.bus to kb_F_Fasted/output.unfiltered.bus
+[2021-07-19 10:14:25,291]    INFO [count] Whitelist not provided
+[2021-07-19 10:14:25,293]    INFO [count] Generating whitelist kb_Arc3/whitelist.txt from BUS file kb_Arc3/tmp/output.s.bus
+[2021-07-19 10:14:25,731]    INFO [count] Inspecting BUS file kb_Arc3/tmp/output.s.bus
+[2021-07-19 10:14:36,164]    INFO [count] Correcting BUS records in kb_Arc3/tmp/output.s.bus to kb_Arc3/tmp/output.s.c.bus with whitelist kb_Arc3/whitelist.txt
+[2021-07-19 10:14:42,963]    INFO [count] Generating count matrix kb_F_Fasted/counts_unfiltered/cells_x_genes from BUS file kb_F_Fasted/output.unfiltered.bus
+[2021-07-19 10:15:03,250]    INFO [count] Reading matrix kb_F_Fasted/counts_unfiltered/cells_x_genes.mtx
+[2021-07-19 10:15:08,125]    INFO [count] Sorting BUS file kb_Arc3/tmp/output.s.c.bus to kb_Arc3/output.unfiltered.bus
+[2021-07-19 10:15:10,702]    INFO [count] Writing matrix to h5ad kb_F_Fasted/counts_unfiltered/adata.h5ad
+... storing 'gene_name' as categorical
+[2021-07-19 10:15:11,862]    INFO [count] Filtering with bustools
+[2021-07-19 10:15:11,863]    INFO [count] Generating whitelist kb_F_Fasted/filter_barcodes.txt from BUS file kb_F_Fasted/output.unfiltered.bus
+[2021-07-19 10:15:12,009]    INFO [count] Correcting BUS records in kb_F_Fasted/output.unfiltered.bus to kb_F_Fasted/tmp/output.unfiltered.c.bus with whitelist kb_F_Fasted/filter_barcodes.txt
+[2021-07-19 10:15:20,734]    INFO [count] Sorting BUS file kb_F_Fasted/tmp/output.unfiltered.c.bus to kb_F_Fasted/output.filtered.bus
+[2021-07-19 10:15:42,274]    INFO [count] Generating count matrix kb_F_Fasted/counts_filtered/cells_x_genes from BUS file kb_F_Fasted/output.filtered.bus
+[2021-07-19 10:15:53,267]    INFO [count] Reading matrix kb_F_Fasted/counts_filtered/cells_x_genes.mtx
+[2021-07-19 10:15:53,707]    INFO [count] Generating count matrix kb_Arc3/counts_unfiltered/cells_x_genes from BUS file kb_Arc3/output.unfiltered.bus
+[2021-07-19 10:15:57,584]    INFO [count] Writing matrix to h5ad kb_F_Fasted/counts_filtered/adata.h5ad
+... storing 'gene_name' as categorical
+[Mon Jul 19 10:15:59 2021]
+Finished job 11.
+1 of 12 steps (8%) done
+Select jobs to execute...
+
+[Mon Jul 19 10:15:59 2021]
+rule kb_gc:
+    input: fastq_gz/M_Fasted_R1.fastq.gz, fastq_gz/M_Fasted_R2.fastq.gz
+    output: kb_M_Fasted/counts_filtered/adata.h5ad
+    log: logs/kallisto-bus_M_Fasted.log
+    jobid: 9
+    wildcards: sample=M_Fasted
+    threads: 10
+    resources: tmpdir=/tmp
+
+kb count             -i /mnt/pub/GENCODE/M27/transcriptome.idx             -g /mnt/pub/GENCODE/M27/transcripts_to_genes.txt             -o kb_M_Fasted             -x DROPSEQ             -t 10             --h5ad             --filter bustools             fastq_gz/M_Fasted_R1.fastq.gz fastq_gz/M_Fasted_R2.fastq.gz
+[2021-07-19 10:16:01,064]    INFO [count] Using index /mnt/pub/GENCODE/M27/transcriptome.idx to generate BUS file to kb_M_Fasted from
+[2021-07-19 10:16:01,065]    INFO [count]         fastq_gz/M_Fasted_R1.fastq.gz
+[2021-07-19 10:16:01,065]    INFO [count]         fastq_gz/M_Fasted_R2.fastq.gz
+[2021-07-19 10:16:23,424]    INFO [count] Reading matrix kb_Arc3/counts_unfiltered/cells_x_genes.mtx
+[2021-07-19 10:16:35,444]    INFO [count] Writing matrix to h5ad kb_Arc3/counts_unfiltered/adata.h5ad
+... storing 'gene_name' as categorical
+[2021-07-19 10:16:37,111]    INFO [count] Filtering with bustools
+[2021-07-19 10:16:37,111]    INFO [count] Generating whitelist kb_Arc3/filter_barcodes.txt from BUS file kb_Arc3/output.unfiltered.bus
+[2021-07-19 10:16:37,374]    INFO [count] Correcting BUS records in kb_Arc3/output.unfiltered.bus to kb_Arc3/tmp/output.unfiltered.c.bus with whitelist kb_Arc3/filter_barcodes.txt
+[2021-07-19 10:17:01,629]    INFO [count] Sorting BUS file kb_Arc3/tmp/output.unfiltered.c.bus to kb_Arc3/output.filtered.bus
+[2021-07-19 10:17:47,720]    INFO [count] Generating count matrix kb_Arc3/counts_filtered/cells_x_genes from BUS file kb_Arc3/output.filtered.bus
+[2021-07-19 10:18:11,852]    INFO [count] Reading matrix kb_Arc3/counts_filtered/cells_x_genes.mtx
+[2021-07-19 10:18:21,298]    INFO [count] Writing matrix to h5ad kb_Arc3/counts_filtered/adata.h5ad
+... storing 'gene_name' as categorical
+[Mon Jul 19 10:18:23 2021]
+Finished job 3.
+2 of 12 steps (17%) done
+Select jobs to execute...
+
+[Mon Jul 19 10:18:23 2021]
+rule kb_gc:
+    input: fastq_gz/Refed_R1.fastq.gz, fastq_gz/Refed_R2.fastq.gz
+    output: kb_Refed/counts_filtered/adata.h5ad
+    log: logs/kallisto-bus_Refed.log
+    jobid: 7
+    wildcards: sample=Refed
+    threads: 10
+    resources: tmpdir=/tmp
+
+kb count             -i /mnt/pub/GENCODE/M27/transcriptome.idx             -g /mnt/pub/GENCODE/M27/transcripts_to_genes.txt             -o kb_Refed             -x DROPSEQ             -t 10             --h5ad             --filter bustools             fastq_gz/Refed_R1.fastq.gz fastq_gz/Refed_R2.fastq.gz
+[2021-07-19 10:18:25,253]    INFO [count] Using index /mnt/pub/GENCODE/M27/transcriptome.idx to generate BUS file to kb_Refed from
+[2021-07-19 10:18:25,254]    INFO [count]         fastq_gz/Refed_R1.fastq.gz
+[2021-07-19 10:18:25,254]    INFO [count]         fastq_gz/Refed_R2.fastq.gz
+[2021-07-19 10:22:39,874]    INFO [count] Sorting BUS file kb_M_Fasted/output.bus to kb_M_Fasted/tmp/output.s.bus
+[2021-07-19 10:24:00,348]    INFO [count] Whitelist not provided
+[2021-07-19 10:24:00,350]    INFO [count] Generating whitelist kb_M_Fasted/whitelist.txt from BUS file kb_M_Fasted/tmp/output.s.bus
+[2021-07-19 10:24:00,769]    INFO [count] Inspecting BUS file kb_M_Fasted/tmp/output.s.bus
+[2021-07-19 10:24:11,412]    INFO [count] Correcting BUS records in kb_M_Fasted/tmp/output.s.bus to kb_M_Fasted/tmp/output.s.c.bus with whitelist kb_M_Fasted/whitelist.txt
+[2021-07-19 10:24:41,395]    INFO [count] Sorting BUS file kb_M_Fasted/tmp/output.s.c.bus to kb_M_Fasted/output.unfiltered.bus
+[2021-07-19 10:25:06,136]    INFO [count] Generating count matrix kb_M_Fasted/counts_unfiltered/cells_x_genes from BUS file kb_M_Fasted/output.unfiltered.bus
+[2021-07-19 10:25:33,335]    INFO [count] Reading matrix kb_M_Fasted/counts_unfiltered/cells_x_genes.mtx
+[2021-07-19 10:25:44,184]    INFO [count] Writing matrix to h5ad kb_M_Fasted/counts_unfiltered/adata.h5ad
+... storing 'gene_name' as categorical
+[2021-07-19 10:25:45,805]    INFO [count] Filtering with bustools
+[2021-07-19 10:25:45,806]    INFO [count] Generating whitelist kb_M_Fasted/filter_barcodes.txt from BUS file kb_M_Fasted/output.unfiltered.bus
+[2021-07-19 10:25:45,966]    INFO [count] Correcting BUS records in kb_M_Fasted/output.unfiltered.bus to kb_M_Fasted/tmp/output.unfiltered.c.bus with whitelist kb_M_Fasted/filter_barcodes.txt
+[2021-07-19 10:25:59,735]    INFO [count] Sorting BUS file kb_M_Fasted/tmp/output.unfiltered.c.bus to kb_M_Fasted/output.filtered.bus
+[2021-07-19 10:26:22,117]    INFO [count] Generating count matrix kb_M_Fasted/counts_filtered/cells_x_genes from BUS file kb_M_Fasted/output.filtered.bus
+[2021-07-19 10:26:40,683]    INFO [count] Reading matrix kb_M_Fasted/counts_filtered/cells_x_genes.mtx
+[2021-07-19 10:26:48,390]    INFO [count] Writing matrix to h5ad kb_M_Fasted/counts_filtered/adata.h5ad
+... storing 'gene_name' as categorical
+[Mon Jul 19 10:26:50 2021]
+Finished job 9.
+3 of 12 steps (25%) done
+Select jobs to execute...
+
+[Mon Jul 19 10:26:50 2021]
+rule kb_gc:
+    input: fastq_gz/Chow10_R1.fastq.gz, fastq_gz/Chow10_R2.fastq.gz
+    output: kb_Chow10/counts_filtered/adata.h5ad
+    log: logs/kallisto-bus_Chow10.log
+    jobid: 4
+    wildcards: sample=Chow10
+    threads: 10
+    resources: tmpdir=/tmp
+
+kb count             -i /mnt/pub/GENCODE/M27/transcriptome.idx             -g /mnt/pub/GENCODE/M27/transcripts_to_genes.txt             -o kb_Chow10             -x DROPSEQ             -t 10             --h5ad             --filter bustools             fastq_gz/Chow10_R1.fastq.gz fastq_gz/Chow10_R2.fastq.gz
+[2021-07-19 10:26:52,501]    INFO [count] Using index /mnt/pub/GENCODE/M27/transcriptome.idx to generate BUS file to kb_Chow10 from
+[2021-07-19 10:26:52,501]    INFO [count]         fastq_gz/Chow10_R1.fastq.gz
+[2021-07-19 10:26:52,501]    INFO [count]         fastq_gz/Chow10_R2.fastq.gz
+[2021-07-19 10:29:36,886]    INFO [count] Sorting BUS file kb_Arc1/output.bus to kb_Arc1/tmp/output.s.bus
+[2021-07-19 10:29:37,111]    INFO [count] Sorting BUS file kb_Fasted/output.bus to kb_Fasted/tmp/output.s.bus
+[2021-07-19 10:34:46,846]    INFO [count] Whitelist not provided
+[2021-07-19 10:34:46,846]    INFO [count] Generating whitelist kb_Arc1/whitelist.txt from BUS file kb_Arc1/tmp/output.s.bus
+[2021-07-19 10:34:48,319]    INFO [count] Inspecting BUS file kb_Arc1/tmp/output.s.bus
+[2021-07-19 10:35:03,470]    INFO [count] Correcting BUS records in kb_Arc1/tmp/output.s.bus to kb_Arc1/tmp/output.s.c.bus with whitelist kb_Arc1/whitelist.txt
+[2021-07-19 10:35:47,355]    INFO [count] Sorting BUS file kb_Chow10/output.bus to kb_Chow10/tmp/output.s.bus
+[2021-07-19 10:36:10,636]    INFO [count] Sorting BUS file kb_Arc1/tmp/output.s.c.bus to kb_Arc1/output.unfiltered.bus
+[2021-07-19 10:37:35,441]    INFO [count] Generating count matrix kb_Arc1/counts_unfiltered/cells_x_genes from BUS file kb_Arc1/output.unfiltered.bus
+[2021-07-19 10:38:05,399]    INFO [count] Whitelist not provided
+[2021-07-19 10:38:05,399]    INFO [count] Generating whitelist kb_Chow10/whitelist.txt from BUS file kb_Chow10/tmp/output.s.bus
+[2021-07-19 10:38:05,915]    INFO [count] Inspecting BUS file kb_Chow10/tmp/output.s.bus
+[2021-07-19 10:38:11,147]    INFO [count] Reading matrix kb_Arc1/counts_unfiltered/cells_x_genes.mtx
+[2021-07-19 10:38:14,921]    INFO [count] Correcting BUS records in kb_Chow10/tmp/output.s.bus to kb_Chow10/tmp/output.s.c.bus with whitelist kb_Chow10/whitelist.txt
+[2021-07-19 10:38:23,118]    INFO [count] Writing matrix to h5ad kb_Arc1/counts_unfiltered/adata.h5ad
+... storing 'gene_name' as categorical
+[2021-07-19 10:38:24,945]    INFO [count] Filtering with bustools
+[2021-07-19 10:38:24,946]    INFO [count] Generating whitelist kb_Arc1/filter_barcodes.txt from BUS file kb_Arc1/output.unfiltered.bus
+[2021-07-19 10:38:25,290]    INFO [count] Correcting BUS records in kb_Arc1/output.unfiltered.bus to kb_Arc1/tmp/output.unfiltered.c.bus with whitelist kb_Arc1/filter_barcodes.txt
+[2021-07-19 10:39:00,459]    INFO [count] Whitelist not provided
+[2021-07-19 10:39:00,459]    INFO [count] Generating whitelist kb_Fasted/whitelist.txt from BUS file kb_Fasted/tmp/output.s.bus
+[2021-07-19 10:39:02,369]    INFO [count] Inspecting BUS file kb_Fasted/tmp/output.s.bus
+[2021-07-19 10:39:02,659]    INFO [count] Sorting BUS file kb_Chow10/tmp/output.s.c.bus to kb_Chow10/output.unfiltered.bus
+[2021-07-19 10:39:04,631]    INFO [count] Sorting BUS file kb_Arc1/tmp/output.unfiltered.c.bus to kb_Arc1/output.filtered.bus
+[2021-07-19 10:39:32,532]    INFO [count] Correcting BUS records in kb_Fasted/tmp/output.s.bus to kb_Fasted/tmp/output.s.c.bus with whitelist kb_Fasted/whitelist.txt
+[2021-07-19 10:40:00,699]    INFO [count] Generating count matrix kb_Chow10/counts_unfiltered/cells_x_genes from BUS file kb_Chow10/output.unfiltered.bus
+[2021-07-19 10:40:03,331]    INFO [count] Generating count matrix kb_Arc1/counts_filtered/cells_x_genes from BUS file kb_Arc1/output.filtered.bus
+[2021-07-19 10:40:28,179]    INFO [count] Reading matrix kb_Arc1/counts_filtered/cells_x_genes.mtx
+[2021-07-19 10:40:34,717]    INFO [count] Reading matrix kb_Chow10/counts_unfiltered/cells_x_genes.mtx
+[2021-07-19 10:40:37,268]    INFO [count] Writing matrix to h5ad kb_Arc1/counts_filtered/adata.h5ad
+... storing 'gene_name' as categorical
+[Mon Jul 19 10:40:39 2021]
+Finished job 1.
+4 of 12 steps (33%) done
+Select jobs to execute...
+
+[Mon Jul 19 10:40:39 2021]
+rule kb_gc:
+    input: fastq_gz/HFD_R1.fastq.gz, fastq_gz/HFD_R2.fastq.gz
+    output: kb_HFD/counts_filtered/adata.h5ad
+    log: logs/kallisto-bus_HFD.log
+    jobid: 5
+    wildcards: sample=HFD
+    threads: 10
+    resources: tmpdir=/tmp
+
+kb count             -i /mnt/pub/GENCODE/M27/transcriptome.idx             -g /mnt/pub/GENCODE/M27/transcripts_to_genes.txt             -o kb_HFD             -x DROPSEQ             -t 10             --h5ad             --filter bustools             fastq_gz/HFD_R1.fastq.gz fastq_gz/HFD_R2.fastq.gz
+[2021-07-19 10:40:41,285]    INFO [count] Using index /mnt/pub/GENCODE/M27/transcriptome.idx to generate BUS file to kb_HFD from
+[2021-07-19 10:40:41,286]    INFO [count]         fastq_gz/HFD_R1.fastq.gz
+[2021-07-19 10:40:41,286]    INFO [count]         fastq_gz/HFD_R2.fastq.gz
+[2021-07-19 10:40:48,653]    INFO [count] Writing matrix to h5ad kb_Chow10/counts_unfiltered/adata.h5ad
+... storing 'gene_name' as categorical
+[2021-07-19 10:40:50,135]    INFO [count] Filtering with bustools
+[2021-07-19 10:40:50,136]    INFO [count] Generating whitelist kb_Chow10/filter_barcodes.txt from BUS file kb_Chow10/output.unfiltered.bus
+[2021-07-19 10:40:50,447]    INFO [count] Correcting BUS records in kb_Chow10/output.unfiltered.bus to kb_Chow10/tmp/output.unfiltered.c.bus with whitelist kb_Chow10/filter_barcodes.txt
+[2021-07-19 10:41:17,691]    INFO [count] Sorting BUS file kb_Chow10/tmp/output.unfiltered.c.bus to kb_Chow10/output.filtered.bus
+[2021-07-19 10:41:57,256]    INFO [count] Sorting BUS file kb_Fasted/tmp/output.s.c.bus to kb_Fasted/output.unfiltered.bus
+[2021-07-19 10:42:34,888]    INFO [count] Generating count matrix kb_Chow10/counts_filtered/cells_x_genes from BUS file kb_Chow10/output.filtered.bus
+[2021-07-19 10:42:39,456]    INFO [count] Sorting BUS file kb_Refed/output.bus to kb_Refed/tmp/output.s.bus
+[2021-07-19 10:43:09,538]    INFO [count] Reading matrix kb_Chow10/counts_filtered/cells_x_genes.mtx
+[2021-07-19 10:43:21,553]    INFO [count] Writing matrix to h5ad kb_Chow10/counts_filtered/adata.h5ad
+... storing 'gene_name' as categorical
+[Mon Jul 19 10:43:25 2021]
+Finished job 4.
+5 of 12 steps (42%) done
+Select jobs to execute...
+
+[Mon Jul 19 10:43:25 2021]
+rule kb_gc:
+    input: fastq_gz/F_Fed_R1.fastq.gz, fastq_gz/F_Fed_R2.fastq.gz
+    output: kb_F_Fed/counts_filtered/adata.h5ad
+    log: logs/kallisto-bus_F_Fed.log
+    jobid: 10
+    wildcards: sample=F_Fed
+    threads: 10
+    resources: tmpdir=/tmp
+
+kb count             -i /mnt/pub/GENCODE/M27/transcriptome.idx             -g /mnt/pub/GENCODE/M27/transcripts_to_genes.txt             -o kb_F_Fed             -x DROPSEQ             -t 10             --h5ad             --filter bustools             fastq_gz/F_Fed_R1.fastq.gz fastq_gz/F_Fed_R2.fastq.gz
+[2021-07-19 10:43:27,076]    INFO [count] Using index /mnt/pub/GENCODE/M27/transcriptome.idx to generate BUS file to kb_F_Fed from
+[2021-07-19 10:43:27,077]    INFO [count]         fastq_gz/F_Fed_R1.fastq.gz
+[2021-07-19 10:43:27,077]    INFO [count]         fastq_gz/F_Fed_R2.fastq.gz
+[2021-07-19 10:43:41,331]    INFO [count] Generating count matrix kb_Fasted/counts_unfiltered/cells_x_genes from BUS file kb_Fasted/output.unfiltered.bus
+[2021-07-19 10:45:39,304]    INFO [count] Reading matrix kb_Fasted/counts_unfiltered/cells_x_genes.mtx
+[2021-07-19 10:46:26,108]    INFO [count] Writing matrix to h5ad kb_Fasted/counts_unfiltered/adata.h5ad
+... storing 'gene_name' as categorical
+[2021-07-19 10:46:30,325]    INFO [count] Filtering with bustools
+[2021-07-19 10:46:30,326]    INFO [count] Generating whitelist kb_Fasted/filter_barcodes.txt from BUS file kb_Fasted/output.unfiltered.bus
+[2021-07-19 10:46:30,962]    INFO [count] Correcting BUS records in kb_Fasted/output.unfiltered.bus to kb_Fasted/tmp/output.unfiltered.c.bus with whitelist kb_Fasted/filter_barcodes.txt
+[2021-07-19 10:47:51,066]    INFO [count] Sorting BUS file kb_Fasted/tmp/output.unfiltered.c.bus to kb_Fasted/output.filtered.bus
+[2021-07-19 10:49:25,611]    INFO [count] Sorting BUS file kb_HFD/output.bus to kb_HFD/tmp/output.s.bus
+[2021-07-19 10:49:56,908]    INFO [count] Generating count matrix kb_Fasted/counts_filtered/cells_x_genes from BUS file kb_Fasted/output.filtered.bus
+[2021-07-19 10:51:26,998]    INFO [count] Reading matrix kb_Fasted/counts_filtered/cells_x_genes.mtx
+[2021-07-19 10:51:34,102]    INFO [count] Whitelist not provided
+[2021-07-19 10:51:34,102]    INFO [count] Generating whitelist kb_HFD/whitelist.txt from BUS file kb_HFD/tmp/output.s.bus
+[2021-07-19 10:51:34,652]    INFO [count] Inspecting BUS file kb_HFD/tmp/output.s.bus
+[2021-07-19 10:51:43,840]    INFO [count] Whitelist not provided
+[2021-07-19 10:51:43,840]    INFO [count] Generating whitelist kb_Refed/whitelist.txt from BUS file kb_Refed/tmp/output.s.bus
+[2021-07-19 10:51:44,643]    INFO [count] Correcting BUS records in kb_HFD/tmp/output.s.bus to kb_HFD/tmp/output.s.c.bus with whitelist kb_HFD/whitelist.txt
+[2021-07-19 10:51:45,516]    INFO [count] Inspecting BUS file kb_Refed/tmp/output.s.bus
+[2021-07-19 10:51:53,241]    INFO [count] Sorting BUS file kb_F_Fed/output.bus to kb_F_Fed/tmp/output.s.bus
+[2021-07-19 10:52:02,076]    INFO [count] Writing matrix to h5ad kb_Fasted/counts_filtered/adata.h5ad
+... storing 'gene_name' as categorical
+[Mon Jul 19 10:52:05 2021]
+Finished job 6.
+6 of 12 steps (50%) done
+Select jobs to execute...
+
+[Mon Jul 19 10:52:05 2021]
+rule kb_gc:
+    input: fastq_gz/Arc2_R1.fastq.gz, fastq_gz/Arc2_R2.fastq.gz
+    output: kb_Arc2/counts_filtered/adata.h5ad
+    log: logs/kallisto-bus_Arc2.log
+    jobid: 2
+    wildcards: sample=Arc2
+    threads: 10
+    resources: tmpdir=/tmp
+
+kb count             -i /mnt/pub/GENCODE/M27/transcriptome.idx             -g /mnt/pub/GENCODE/M27/transcripts_to_genes.txt             -o kb_Arc2             -x DROPSEQ             -t 10             --h5ad             --filter bustools             fastq_gz/Arc2_R1.fastq.gz fastq_gz/Arc2_R2.fastq.gz
+[2021-07-19 10:52:07,102]    INFO [count] Using index /mnt/pub/GENCODE/M27/transcriptome.idx to generate BUS file to kb_Arc2 from
+[2021-07-19 10:52:07,102]    INFO [count]         fastq_gz/Arc2_R1.fastq.gz
+[2021-07-19 10:52:07,103]    INFO [count]         fastq_gz/Arc2_R2.fastq.gz
+[2021-07-19 10:52:13,695]    INFO [count] Correcting BUS records in kb_Refed/tmp/output.s.bus to kb_Refed/tmp/output.s.c.bus with whitelist kb_Refed/whitelist.txt
+[2021-07-19 10:52:14,203]    INFO [count] Sorting BUS file kb_HFD/tmp/output.s.c.bus to kb_HFD/output.unfiltered.bus
+[2021-07-19 10:53:16,539]    INFO [count] Generating count matrix kb_HFD/counts_unfiltered/cells_x_genes from BUS file kb_HFD/output.unfiltered.bus
+[2021-07-19 10:53:29,156]    INFO [count] Whitelist not provided
+[2021-07-19 10:53:29,157]    INFO [count] Generating whitelist kb_F_Fed/whitelist.txt from BUS file kb_F_Fed/tmp/output.s.bus
+[2021-07-19 10:53:29,664]    INFO [count] Inspecting BUS file kb_F_Fed/tmp/output.s.bus
+[2021-07-19 10:53:39,700]    INFO [count] Correcting BUS records in kb_F_Fed/tmp/output.s.bus to kb_F_Fed/tmp/output.s.c.bus with whitelist kb_F_Fed/whitelist.txt
+[2021-07-19 10:53:55,882]    INFO [count] Reading matrix kb_HFD/counts_unfiltered/cells_x_genes.mtx
+[2021-07-19 10:53:56,385]    INFO [count] Sorting BUS file kb_F_Fed/tmp/output.s.c.bus to kb_F_Fed/output.unfiltered.bus
+[2021-07-19 10:54:13,738]    INFO [count] Generating count matrix kb_F_Fed/counts_unfiltered/cells_x_genes from BUS file kb_F_Fed/output.unfiltered.bus
+[2021-07-19 10:54:13,956]    INFO [count] Writing matrix to h5ad kb_HFD/counts_unfiltered/adata.h5ad
+... storing 'gene_name' as categorical
+[2021-07-19 10:54:15,473]    INFO [count] Filtering with bustools
+[2021-07-19 10:54:15,474]    INFO [count] Generating whitelist kb_HFD/filter_barcodes.txt from BUS file kb_HFD/output.unfiltered.bus
+[2021-07-19 10:54:15,806]    INFO [count] Correcting BUS records in kb_HFD/output.unfiltered.bus to kb_HFD/tmp/output.unfiltered.c.bus with whitelist kb_HFD/filter_barcodes.txt
+[2021-07-19 10:54:28,815]    INFO [count] Reading matrix kb_F_Fed/counts_unfiltered/cells_x_genes.mtx
+[2021-07-19 10:54:35,270]    INFO [count] Writing matrix to h5ad kb_F_Fed/counts_unfiltered/adata.h5ad
+... storing 'gene_name' as categorical
+[2021-07-19 10:54:36,407]    INFO [count] Filtering with bustools
+[2021-07-19 10:54:36,407]    INFO [count] Generating whitelist kb_F_Fed/filter_barcodes.txt from BUS file kb_F_Fed/output.unfiltered.bus
+[2021-07-19 10:54:36,529]    INFO [count] Correcting BUS records in kb_F_Fed/output.unfiltered.bus to kb_F_Fed/tmp/output.unfiltered.c.bus with whitelist kb_F_Fed/filter_barcodes.txt
+[2021-07-19 10:54:42,094]    INFO [count] Sorting BUS file kb_F_Fed/tmp/output.unfiltered.c.bus to kb_F_Fed/output.filtered.bus
+[2021-07-19 10:54:45,260]    INFO [count] Sorting BUS file kb_Refed/tmp/output.s.c.bus to kb_Refed/output.unfiltered.bus
+[2021-07-19 10:54:45,289]    INFO [count] Sorting BUS file kb_HFD/tmp/output.unfiltered.c.bus to kb_HFD/output.filtered.bus
+[2021-07-19 10:54:53,632]    INFO [count] Generating count matrix kb_F_Fed/counts_filtered/cells_x_genes from BUS file kb_F_Fed/output.filtered.bus
+[2021-07-19 10:54:59,342]    INFO [count] Reading matrix kb_F_Fed/counts_filtered/cells_x_genes.mtx
+[2021-07-19 10:55:01,166]    INFO [count] Writing matrix to h5ad kb_F_Fed/counts_filtered/adata.h5ad
+... storing 'gene_name' as categorical
+[Mon Jul 19 10:55:02 2021]
+Finished job 10.
+7 of 12 steps (58%) done
+Select jobs to execute...
+
+[Mon Jul 19 10:55:02 2021]
+rule kb_gc:
+    input: fastq_gz/M_Fed_R1.fastq.gz, fastq_gz/M_Fed_R2.fastq.gz
+    output: kb_M_Fed/counts_filtered/adata.h5ad
+    log: logs/kallisto-bus_M_Fed.log
+    jobid: 8
+    wildcards: sample=M_Fed
+    threads: 10
+    resources: tmpdir=/tmp
+
+kb count             -i /mnt/pub/GENCODE/M27/transcriptome.idx             -g /mnt/pub/GENCODE/M27/transcripts_to_genes.txt             -o kb_M_Fed             -x DROPSEQ             -t 10             --h5ad             --filter bustools             fastq_gz/M_Fed_R1.fastq.gz fastq_gz/M_Fed_R2.fastq.gz
+[2021-07-19 10:55:04,438]    INFO [count] Using index /mnt/pub/GENCODE/M27/transcriptome.idx to generate BUS file to kb_M_Fed from
+[2021-07-19 10:55:04,439]    INFO [count]         fastq_gz/M_Fed_R1.fastq.gz
+[2021-07-19 10:55:04,439]    INFO [count]         fastq_gz/M_Fed_R2.fastq.gz
+[2021-07-19 10:55:43,311]    INFO [count] Generating count matrix kb_HFD/counts_filtered/cells_x_genes from BUS file kb_HFD/output.filtered.bus
+[2021-07-19 10:56:26,760]    INFO [count] Reading matrix kb_HFD/counts_filtered/cells_x_genes.mtx
+[2021-07-19 10:56:36,386]    INFO [count] Generating count matrix kb_Refed/counts_unfiltered/cells_x_genes from BUS file kb_Refed/output.unfiltered.bus
+[2021-07-19 10:56:42,134]    INFO [count] Writing matrix to h5ad kb_HFD/counts_filtered/adata.h5ad
+... storing 'gene_name' as categorical
+[Mon Jul 19 10:56:44 2021]
+Finished job 5.
+8 of 12 steps (67%) done
+[2021-07-19 10:58:29,299]    INFO [count] Reading matrix kb_Refed/counts_unfiltered/cells_x_genes.mtx
+[2021-07-19 10:59:21,163]    INFO [count] Writing matrix to h5ad kb_Refed/counts_unfiltered/adata.h5ad
+... storing 'gene_name' as categorical
+[2021-07-19 10:59:24,892]    INFO [count] Filtering with bustools
+[2021-07-19 10:59:24,892]    INFO [count] Generating whitelist kb_Refed/filter_barcodes.txt from BUS file kb_Refed/output.unfiltered.bus
+[2021-07-19 10:59:25,538]    INFO [count] Correcting BUS records in kb_Refed/output.unfiltered.bus to kb_Refed/tmp/output.unfiltered.c.bus with whitelist kb_Refed/filter_barcodes.txt
+[2021-07-19 10:59:51,638]    INFO [count] Sorting BUS file kb_Arc2/output.bus to kb_Arc2/tmp/output.s.bus
+[2021-07-19 11:00:21,199]    INFO [count] Sorting BUS file kb_Refed/tmp/output.unfiltered.c.bus to kb_Refed/output.filtered.bus
+[2021-07-19 11:00:31,304]    INFO [count] Sorting BUS file kb_M_Fed/output.bus to kb_M_Fed/tmp/output.s.bus
+[2021-07-19 11:01:05,067]    INFO [count] Whitelist not provided
+[2021-07-19 11:01:05,068]    INFO [count] Generating whitelist kb_Arc2/whitelist.txt from BUS file kb_Arc2/tmp/output.s.bus
+[2021-07-19 11:01:05,497]    INFO [count] Inspecting BUS file kb_Arc2/tmp/output.s.bus
+[2021-07-19 11:01:12,729]    INFO [count] Correcting BUS records in kb_Arc2/tmp/output.s.bus to kb_Arc2/tmp/output.s.c.bus with whitelist kb_Arc2/whitelist.txt
+[2021-07-19 11:01:24,815]    INFO [count] Whitelist not provided
+[2021-07-19 11:01:24,815]    INFO [count] Generating whitelist kb_M_Fed/whitelist.txt from BUS file kb_M_Fed/tmp/output.s.bus
+[2021-07-19 11:01:25,110]    INFO [count] Inspecting BUS file kb_M_Fed/tmp/output.s.bus
+[2021-07-19 11:01:30,751]    INFO [count] Correcting BUS records in kb_M_Fed/tmp/output.s.bus to kb_M_Fed/tmp/output.s.c.bus with whitelist kb_M_Fed/whitelist.txt
+[2021-07-19 11:01:38,736]    INFO [count] Sorting BUS file kb_Arc2/tmp/output.s.c.bus to kb_Arc2/output.unfiltered.bus
+[2021-07-19 11:01:39,673]    INFO [count] Generating count matrix kb_Refed/counts_filtered/cells_x_genes from BUS file kb_Refed/output.filtered.bus
+[2021-07-19 11:01:47,458]    INFO [count] Sorting BUS file kb_M_Fed/tmp/output.s.c.bus to kb_M_Fed/output.unfiltered.bus
+[2021-07-19 11:02:03,772]    INFO [count] Generating count matrix kb_M_Fed/counts_unfiltered/cells_x_genes from BUS file kb_M_Fed/output.unfiltered.bus
+[2021-07-19 11:02:07,046]    INFO [count] Generating count matrix kb_Arc2/counts_unfiltered/cells_x_genes from BUS file kb_Arc2/output.unfiltered.bus
+[2021-07-19 11:02:17,387]    INFO [count] Reading matrix kb_M_Fed/counts_unfiltered/cells_x_genes.mtx
+[2021-07-19 11:02:23,342]    INFO [count] Writing matrix to h5ad kb_M_Fed/counts_unfiltered/adata.h5ad
+... storing 'gene_name' as categorical
+[2021-07-19 11:02:24,267]    INFO [count] Filtering with bustools
+[2021-07-19 11:02:24,268]    INFO [count] Generating whitelist kb_M_Fed/filter_barcodes.txt from BUS file kb_M_Fed/output.unfiltered.bus
+[2021-07-19 11:02:24,377]    INFO [count] Correcting BUS records in kb_M_Fed/output.unfiltered.bus to kb_M_Fed/tmp/output.unfiltered.c.bus with whitelist kb_M_Fed/filter_barcodes.txt
+[2021-07-19 11:02:28,827]    INFO [count] Reading matrix kb_Arc2/counts_unfiltered/cells_x_genes.mtx
+[2021-07-19 11:02:30,310]    INFO [count] Sorting BUS file kb_M_Fed/tmp/output.unfiltered.c.bus to kb_M_Fed/output.filtered.bus
+[2021-07-19 11:02:39,319]    INFO [count] Writing matrix to h5ad kb_Arc2/counts_unfiltered/adata.h5ad
+... storing 'gene_name' as categorical
+[2021-07-19 11:02:40,531]    INFO [count] Filtering with bustools
+[2021-07-19 11:02:40,532]    INFO [count] Generating whitelist kb_Arc2/filter_barcodes.txt from BUS file kb_Arc2/output.unfiltered.bus
+[2021-07-19 11:02:40,744]    INFO [count] Correcting BUS records in kb_Arc2/output.unfiltered.bus to kb_Arc2/tmp/output.unfiltered.c.bus with whitelist kb_Arc2/filter_barcodes.txt
+[2021-07-19 11:02:41,963]    INFO [count] Generating count matrix kb_M_Fed/counts_filtered/cells_x_genes from BUS file kb_M_Fed/output.filtered.bus
+[2021-07-19 11:02:51,818]    INFO [count] Reading matrix kb_M_Fed/counts_filtered/cells_x_genes.mtx
+[2021-07-19 11:02:52,814]    INFO [count] Sorting BUS file kb_Arc2/tmp/output.unfiltered.c.bus to kb_Arc2/output.filtered.bus
+[2021-07-19 11:02:54,560]    INFO [count] Reading matrix kb_Refed/counts_filtered/cells_x_genes.mtx
+[2021-07-19 11:02:55,968]    INFO [count] Writing matrix to h5ad kb_M_Fed/counts_filtered/adata.h5ad
+... storing 'gene_name' as categorical
+[Mon Jul 19 11:02:57 2021]
+Finished job 8.
+9 of 12 steps (75%) done
+[2021-07-19 11:03:15,885]    INFO [count] Generating count matrix kb_Arc2/counts_filtered/cells_x_genes from BUS file kb_Arc2/output.filtered.bus
+[2021-07-19 11:03:30,433]    INFO [count] Writing matrix to h5ad kb_Refed/counts_filtered/adata.h5ad
+... storing 'gene_name' as categorical
+[2021-07-19 11:03:32,193]    INFO [count] Reading matrix kb_Arc2/counts_filtered/cells_x_genes.mtx
+[Mon Jul 19 11:03:33 2021]
+Finished job 7.
+10 of 12 steps (83%) done
+[2021-07-19 11:03:39,413]    INFO [count] Writing matrix to h5ad kb_Arc2/counts_filtered/adata.h5ad
+... storing 'gene_name' as categorical
+[Mon Jul 19 11:03:40 2021]
+Finished job 2.
+11 of 12 steps (92%) done
+Select jobs to execute...
+
+[Mon Jul 19 11:03:40 2021]
+localrule all:
+    input: kb_Arc1/counts_filtered/adata.h5ad, kb_Arc2/counts_filtered/adata.h5ad, kb_Arc3/counts_filtered/adata.h5ad, kb_Chow10/counts_filtered/adata.h5ad, kb_HFD/counts_filtered/adata.h5ad, kb_Fasted/counts_filtered/adata.h5ad, kb_Refed/counts_filtered/adata.h5ad, kb_M_Fed/counts_filtered/adata.h5ad, kb_M_Fasted/counts_filtered/adata.h5ad, kb_F_Fed/counts_filtered/adata.h5ad, kb_F_Fasted/counts_filtered/adata.h5ad
+    jobid: 0
+    resources: tmpdir=/tmp
+
+[Mon Jul 19 11:03:40 2021]
+Finished job 0.
+12 of 12 steps (100%) done
+Complete log: /mnt/data/PRJNA360829/.snakemake/log/2021-07-19T100413.862805.snakemake.log

@@ -1,0 +1,204 @@
+---
+title: "R Notebook"
+output: html_notebook
+editor_options: 
+  chunk_output_type: inline
+---
+
+
+
+```{r}
+suppressPackageStartupMessages({
+    library(readr)
+    library(here)
+    library(janitor)
+    library(stringr)
+    library(dplyr)
+    library(magrittr)
+    # library(SingleCellExperiment)
+    # library(scater)
+    # library(BiocParallel)
+    library(biomaRt)
+    library(Seurat)
+    library(SeuratDisk)
+    library(liana)
+})
+
+t2g <- read_tsv("/mnt/pub/GENCODE/M27/transcripts_to_genes.txt", 
+                col_names = c("tr_id", "ensembl_gene_id", "external_gene_name",
+                              "external_gene_name_variant",
+                              "chr", "start", "end", "strand"))
+
+tln <- t2g %>%  dplyr::select(ensembl_gene_id, external_gene_name) %>% 
+    distinct(ensembl_gene_id, .keep_all = TRUE) %>%
+    distinct(external_gene_name, .keep_all = TRUE)
+
+campbell2017_meta <- read_tsv(file = here("meta.txt"), col_names = TRUE) %>% 
+        distinct(NAME, .keep_all = TRUE) %>%
+        clean_names() %>%
+        remove_empty(c("rows", "cols"))
+
+campbell2017_meta %<>% dplyr::rename(
+  cell_id = name,
+  cell_class = all_cell_clusters,
+  cell_subclass = all_cell_subclusters,
+  neuronal_subclass = neurons_only_clusters
+) %>%
+  dplyr::mutate(
+    study_id = "Campbell2017",
+    sex = ifelse(
+      test = sex == "Male",
+      yes = 1,
+      no = 0
+    ),
+    predicted_sex = ifelse(
+      test = sex == "Male",
+      yes = 1,
+      no = 0
+    ),
+    age = ifelse(
+      test = as.integer(batch) == 5,
+      yes = ifelse(fed_fasted == "Fast", "P64", "P75"),
+      no = plyr::mapvalues(
+        as.integer(batch),
+        from = c(1, 2, 3, 4, 6),
+        to = c("P34", "P28", "P30", "P47", "P59")
+      )
+    )
+  ) %>%
+  dplyr::mutate(batch = str_c(study_id, batch, sep = "_")) %>%
+  as.data.frame
+rownames(campbell2017_meta) <- campbell2017_meta$cell_id
+
+
+
+# sce <- read_rds("campbell.rds")
+# # sce <- read_rds("campbell2017.rds")
+# assayNames(sce) <- "counts"
+# counts(sce) <- as(counts(sce), "dgCMatrix")
+# sum(duplicated(rownames(sce))) # 0
+# 
+# sce$cell_type1 %>% table()
+# sce <- logNormCounts(sce)
+# dim(logcounts(sce))
+# assays(sce) <- assays(sce)[c("counts", "logcounts")]
+# 
+# keep <-
+#         sce$cell_type %>%
+#         table() %>%
+#         names() %>%
+#         .[stringr::str_detect(string = .,
+#                               pattern = "Unstable",
+#                               negate = T)]
+#     
+# srt <- as.Seurat(sce)
+# srt %<>% RenameCells(new.names = str_c("campbell2017_", colnames(srt)))
+# rownames(srt@meta.data) <- colnames(srt)
+# Idents(srt) <- "cell_type"
+# srt %<>% subset(idents = keep %>% .[. %in% Idents(srt)]) 
+# 
+# srt$age <- "P60"
+# srt$tech <- "dropseq"
+# srt$diet
+# srt$orig.ident <- str_c(srt$study_id, srt$batch, "HPT", sep = "_")
+
+
+runs <- 
+    list.dirs() %>% 
+    .[stringr::str_detect(string = ., pattern = "kb_")] %>% 
+    .[stringr::str_detect(string = ., pattern = "counts_filtered")]
+samp <- runs %>% 
+  str_remove(pattern = "./kb_") %>% 
+  str_split_fixed(pattern = "/", n = 2) %>% 
+  .[, 1] %>% 
+  plyr::mapvalues(x = .,
+                  from = c(
+                    "Arc1",
+                    "Arc2",
+                    "Arc3",
+                    "Chow10",
+                    "HFD",
+                    "Fasted",
+                    "Refed",
+                    "F_Fasted",
+                    "F_Fed",
+                    "M_Fasted",
+                    "M_Fed"),
+                  to = c(
+                    "arc1",
+                    "arc2",
+                    "arc3",
+                    "Chow",
+                    "HFD",
+                    "Fasted",
+                    "Refed",
+                    "FemaleFasted",
+                    "FemaleFed",
+                    "MaleFasted",
+                    "MaleFed"))
+names(runs) <- samp
+
+ReadKB <- function(path, prj) {
+    Convert(sprintf("%s/adata.h5ad", path), dest = "h5seurat", overwrite = TRUE)
+    srt <- LoadH5Seurat(sprintf("%s/adata.h5seurat", path))
+    srt <- RenameCells(srt, prj)
+    srt <- DietSeurat(srt, features = tln$ensembl_gene_id)
+    cellnames <- 
+        intersect(colnames(srt),
+                  campbell2017_meta$cell_id %>% .[str_starts(string = ., pattern = prj)])
+    srt %<>% subset(cells = cellnames)
+    mdata <- campbell2017_meta %>% 
+        dplyr::filter(cell_id %in% colnames(srt)) %>% 
+        dplyr::arrange(match(cell_id, colnames(srt)))
+    rownames(mdata) <- mdata$cell_id
+    srt %<>% AddMetaData(mdata)
+    
+    rownames(srt@assays$RNA@counts) <- 
+        tln %>% 
+        arrange(match(ensembl_gene_id, rownames(srt))) %>% 
+        .$external_gene_name
+    rownames(srt@assays$RNA@data) <- 
+        tln %>% 
+        arrange(match(ensembl_gene_id, rownames(srt))) %>% 
+        .$external_gene_name
+    
+    SaveH5Seurat(srt, filename = sprintf("%s/adata_wt_metadata.h5seurat", path), overwrite = TRUE)
+    return(srt)
+}
+srt_list <- runs %>% purrr::imap(ReadKB)
+arh_combined <- merge(srt_list[["arc1"]], y = c(srt_list[["arc2"]], 
+                                                srt_list[["arc3"]],
+                                                srt_list[["FemaleFed"]],
+                                                srt_list[["MaleFed"]],
+                                                srt_list[["FemaleFasted"]], 
+                                                srt_list[["MaleFasted"]], 
+                                                srt_list[["Fasted"]],
+                                                srt_list[["Chow"]],
+                                                srt_list[["HFD"]],
+                                                srt_list[["Refed"]]), 
+                      project = "arh_campbell_2017")
+arh_combined$orig.ident <- arh_combined$sample
+glimpse(arh_combined@meta.data)
+table(arh_combined$orig.ident)
+SaveH5Seurat(arh_combined, filename = "campbell2017_hpt.h5seurat", overwrite = T)
+Convert("campbell2017_hpt.h5seurat", dest = "h5ad", overwrite = T)
+
+arh_combined_norm_diet <- merge(srt_list[["arc1"]], y = c(srt_list[["arc2"]], 
+                                                srt_list[["arc3"]]), 
+                      project = "arh_campbell_2017")
+arh_combined_norm_diet$orig.ident <- arh_combined_norm_diet$sample
+glimpse(arh_combined_norm_diet@meta.data)
+table(arh_combined_norm_diet$orig.ident)
+SaveH5Seurat(arh_combined_norm_diet, filename = "campbell2017_hpt_norm_diet.h5seurat", overwrite = T)
+Convert("campbell2017_hpt_norm_diet.h5seurat", dest = "h5ad", overwrite = T)
+
+```
+
+```{r}
+# Idents(arh_combined_norm_diet) <- "cell_subclass"
+# get_resources()
+# liana_test <- liana_wrap(arh_combined_norm_diet,
+#                         method = c('squidpy', 'connectome', 'cellchat'),
+#                         resource = get_resources())
+```
+
